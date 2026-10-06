@@ -966,6 +966,17 @@ dfn.t:hover,dfn.t[data-open]{border-bottom-color:var(--ink);background:var(--acc
 <li><strong>Liquidez retirable y actividad fabricada:</strong> un filtro de capitalización mínima (por ejemplo 9.000 USD) no los evita (boxmining).</li>
 </ul>
 
+<h3>Detectar bots en un token antes de comprar</h3>
+<p>Luo y colaboradores (WWW 2026, arXiv 2601.08641) clasifican cinco tipos de bots que actúan sobre un token de pump.fun. Un bot, aquí, es un programa que opera o comenta de forma automática. La tabla indica cómo reconocerlos con un explorador de bloques o un analizador de wallets.</p>
+<div class="tw"><table class="wide"><caption>Tipos de bots, detección manual y efecto medido. Fuente: Luo et al. (2026), sección 4, Fig. 4; muestra de 6.000 memecoins de pump.fun, datos de Flipside</caption><thead><tr><th>Bot</th><th>Qué hace</th><th>Cómo detectarlo a mano</th><th>Efecto medido</th></tr></thead><tbody>
+<tr><td>Bundle</td><td>El creador financia varias wallets nuevas y compra desde ellas en el mismo bloque del lanzamiento, para ocultar su posición.</td><td>Alguna wallet distinta del creador compra en el bloque del lanzamiento.</td><td>Aparece en aproximadamente 1 de cada 4 proyectos. Asociación débil con menor retorno máximo y caída más rápida.</td></tr>
+<tr><td>Gradual bundle</td><td>Lo mismo, repartido en varios bloques y a veces con varias capas de financiación.</td><td>Velas con subida mecánica, demasiado regular. Las subidas orgánicas son irregulares.</td><td>El más difícil de detectar. El sistema del artículo rechaza los tokens con velas mecánicas.</td></tr>
+<tr><td>Sniper</td><td>Compra en los primeros 1 a 5 bloques (unos 0,4 a 2 segundos), por debajo del tiempo de reacción humano.</td><td>Compras de terceros en los 5 primeros bloques.</td><td>Muy extendido. No cambia el resultado del token: traslada beneficio de los compradores lentos a los rápidos.</td></tr>
+<tr><td>Bump bot</td><td>Compra y vende cantidades idénticas de forma repetida para que el token aparezca en la portada de pump.fun, sin cambiar su posición neta.</td><td>Secuencias de compra y venta de la misma cantidad. El artículo usa el número de pares compra/venta idénticos dividido entre el cambio de posición neta, con umbral de 50.</td><td>Asociado a mejor rendimiento del token.</td></tr>
+<tr><td>Comment bot</td><td>Publica comentarios genéricos de euforia que no responden a nadie ("TO THE MOON!!!").</td><td>Comentarios repetitivos y sin relación con el resto de la conversación.</td><td>Asociado a mejor rendimiento del token.</td></tr>
+</tbody></table></div>
+<p>Los bots de posición (bundle y sniper) no cambian el resultado medio del token. Deciden quién se queda el beneficio. Los bots de atención (bump y comentarios) acompañan a tokens con mejor rendimiento: son visibilidad comprada, no una señal de seguridad. <span class="tag inf">Inferencia</span> Un bump bot puede indicar que alguien invierte en promocionar el token; no indica que puedas salir con beneficio.</p>
+
 <h3>Lista de comprobación antes de operar</h3>
 <p>Marca lo que has comprobado. Los puntos críticos son obligatorios: si falta alguno, el resultado es "no operar". El resultado y las marcas se guardan en este navegador.</p>
 <div class="tool" id="tool-check" role="group" aria-labelledby="tk-h">
@@ -996,6 +1007,7 @@ dfn.t:hover,dfn.t[data-open]{border-bottom-color:var(--ink);background:var(--acc
 <li><a href="https://boxmining.com/axiom-memecoin-trading-guide/">boxmining, filtros previos a la compra</a></li>
 <li><a href="https://cryptoslate.com/ansem-soars-299-and-brings-solanas-memecoin-trenches-back-to-life-but-do-we-need-it-now/">CryptoSlate, ANSEM</a></li>
 <li><a href="https://www.cryptotimes.io/2026/09/16/bubblemaps-adds-pre-screened-token-feed-insider-score-in-app-swap-in-platform-overhaul/">Crypto Times, Bubblemaps</a></li>
+<li><a href="https://arxiv.org/abs/2601.08641">Luo, Feng, Xu y Liu, Resisting Manipulative Bots in Meme Coin Copy Trading (WWW 2026, arXiv 2601.08641)</a></li>
 </ul></details>
 <div class="todo"><h3 id="m5t">Qué hacer con esto</h3>
 <ol>
@@ -1498,6 +1510,34 @@ dfn.t:hover,dfn.t[data-open]{border-bottom-color:var(--ink);background:var(--acc
 <tr><td>Viabilidad para un principiante</td><td>Murad (97% de probabilidad de perder) y Cupsey en 2025 ("probably not")</td><td>Ethan, Daumen y Profits dan pautas para empezar</td></tr>
 </tbody></table></div>
 
+<h3>Criterios para elegir wallets a seguir</h3>
+<p>El sistema de Luo y colaboradores (WWW 2026, arXiv 2601.08641) solo considera una wallet para copiar si cumple todas las condiciones de su Tabla 1. Se listan aquí porque son criterios cuantitativos publicados. Los percentiles se calcularon sobre su muestra de entrenamiento de memecoins de pump.fun. <span class="tag inf">Inferencia</span> Con otros datos o en otro periodo, los percentiles cambian: recalíbralos con tus propios datos antes de usarlos.</p>
+<p>Condiciones sobre la wallet:</p>
+<ol>
+<li>Retorno medio por memecoin mayor que 0.</li>
+<li>Estadístico t del retorno medio mayor que 1,645. El estadístico t mide si la media es distinta de cero más allá del azar. El valor 1,645 corresponde a un nivel de confianza del 95% en una prueba unilateral.</li>
+<li>Desviación típica de los retornos menor que 1 (es decir, menor que el 100% del capital invertido).</li>
+<li>Número de operaciones por encima del percentil 25.</li>
+<li>Tiempo desde la última operación por debajo del percentil 75. Exige que la wallet esté activa.</li>
+<li>Tiempo desde la primera operación por encima del percentil 25. Exige antigüedad.</li>
+</ol>
+<p>Condiciones sobre el token concreto y la entrada:</p>
+<ol>
+<li>Tiempo desde el lanzamiento por debajo del percentil 75.</li>
+<li>Tamaño de compra de la wallet por encima del percentil 25.</li>
+<li>Sin bundle en el token (compras coordinadas desde wallets financiadas por el creador; ver módulo 5).</li>
+<li>Velas sin subida mecánica.</li>
+<li>Comentarios con sentimiento positivo orgánico, no repetitivo.</li>
+</ol>
+<p>Los autores midieron cuánto aporta cada componente con un estudio de ablación: se quita un componente y se mide cuánto empeora el resultado. Las cifras son la caída relativa del AUC (capacidad de ordenar wallets rentables por encima de las no rentables) y del retorno del copiador.</p>
+<div class="tw"><table><caption>Estudio de ablación del sistema multiagente. Fuente: Luo et al. (2026), conjunto de test</caption><thead><tr><th>Componente eliminado</th><th>Caída del AUC</th><th>Caída del retorno del copiador</th></tr></thead><tbody>
+<tr><td>Análisis de la wallet</td><td>11,3%</td><td>9,4%</td></tr>
+<tr><td>Análisis del token</td><td>9,8%</td><td>8,5%</td></tr>
+<tr><td>Momento de entrada</td><td>3,5%</td><td>1,6%</td></tr>
+</tbody></table></div>
+<p>La calidad de la wallet y la calidad del token pesan más que el momento de entrada.</p>
+<div class="callout warn"><div class="ct">Cumplirlos no garantiza beneficio</div><p>Una wallet que cumple todos estos criterios puede seguir dando pérdida a quien la copia, porque el copiador compra siempre a un precio más alto en la curva de bonding. La explicación y las cifras están en la subsección "Por qué copiar a una wallet rentable no basta" del módulo 9.</p></div>
+
 <h3>Lo que no te dicen</h3>
 <ul>
 <li><strong>Tiempo de trabajo.</strong> Los traders rentables declaran de 8 a 18 horas diarias: Cupsey de 16 a 18, Cented unas 14, Kev hasta 16, Danny de 14 a 15, Orangie de 10 a 16, Daumen de 9 a 10 y Deko de 8 a 9, el mínimo de la muestra. Cupsey declara un agotamiento (burnout) en mayo de 2025 y un mes de descanso en 2026.</li>
@@ -1539,6 +1579,7 @@ dfn.t:hover,dfn.t[data-open]{border-bottom-color:var(--ink);background:var(--acc
 <li><a href="https://solanafloor.com/news/pump-fun-s-creator-revenue-sharing-reality-vs-hype">SolanaFloor, ingresos de creadores</a>; <a href="https://decrypt.co/337872/pump-funs-new-fee-model-hands-out-2m-to-creators-in-first-24-hours">Decrypt, 2M $ a creadores en 24 horas</a></li>
 <li><a href="https://phemex.com/news/article/solana-memecoin-hold-time-plummets-to-58-seconds-in-2026-70043">Phemex, duración media de las posiciones en Solana (2026-03-31)</a></li>
 <li>Veinte vídeos de YouTube (subtítulos automáticos en inglés, fechas de 2024-12 a 2026-09; identificadores y marcas de tiempo en las extracciones de la investigación): Cupsey (9gSkuPnY7Wc, UHs0tP2z6Tc, efq61vbmotM, EUybINsX9QU), Cented (w0WtVwlR3cY, 5xamswqQpQU), Orangie (kaC4piyce3c, 86ABG8pNSeg), Daumen y entrevistados (4itGU4D3odc, 1aiq7iDcDJA, VCWrXNktfnc, 4QNfRWqzuag, 1FdtJW9uPsE), Kev (reEvUlC25B0), Prophet (KtDQeRJFFZc), Ethan (L-UoqEO5Kfs), Qwerty (-ILnWOT87hQ), Murad (nFnwrFWfW9w), Ansem (cIXsWlKEPT8), Unipcs de segunda mano (jRE0iZm9iKA). URL: https://www.youtube.com/watch?v=&lt;identificador&gt;</li>
+<li><a href="https://arxiv.org/abs/2601.08641">Luo, Feng, Xu y Liu, Resisting Manipulative Bots in Meme Coin Copy Trading (WWW 2026, arXiv 2601.08641)</a></li>
 </ul></details>
 <div class="todo"><h3 id="m8t">Qué hacer con esto</h3>
 <ol>
@@ -1566,7 +1607,7 @@ dfn.t:hover,dfn.t[data-open]{border-bottom-color:var(--ink);background:var(--acc
 <ol>
 <li><strong>El comprador al azar pierde.</strong> En MemeTrans (Georgia Tech, 41.470 lanzamientos de pump.fun entre diciembre de 2024 y marzo de 2025), el 84,13% de los lanzamientos fue de alto riesgo tras la migración. Se etiquetó así a los tokens cuyo precio mínimo en 20 minutos fue inferior al 30% del precio de migración, o con puntuación de manipulación alta. Comprar al azar tras la migración perdió aproximadamente un 61% de media en esa ventana.</li>
 <li><strong>El filtro reduce la pérdida, no crea ganancia.</strong> La selección guiada por un modelo con variables de bundles y de actividad de mercado perdió aproximadamente un 27%. La reducción máxima de pérdida fue del 56,1%. Es un filtro de descarte y no una señal de entrada rentable.</li>
-<li><strong>Copiar wallets por su beneficio no funciona tras costes.</strong> Luo y colaboradores (WWW 2026, 6.000 proyectos de Solana) concluyen que los beneficios positivos de las wallets de "dinero inteligente" no bastan para dar beneficio a quien copia, por el impacto de precio y las fricciones en la curva de bonding. Solo un sistema con filtrado adicional (descartar manipuladores y considerar el momento de entrada) estimó un +3% por operación en una prueba con datos pasados, sin validación posterior ni costes de ejecución reales.</li>
+<li><strong>Copiar wallets por su beneficio no funciona tras costes.</strong> Luo y colaboradores (WWW 2026, 6.000 proyectos de Solana) concluyen que los beneficios positivos de las wallets de "dinero inteligente" no bastan para dar beneficio a quien copia, por el impacto de precio y las fricciones en la curva de bonding. Solo un sistema con filtrado adicional (descartar manipuladores y considerar el momento de entrada) estimó un +3% por operación en una prueba con datos pasados, con una sola partición de test cronológica, sin prueba en tiempo real ni costes de ejecución reales.</li>
 <li><strong>Los modelos se degradan.</strong> Kamat (2026) entrenó un modelo de graduación con mayo y junio de 2026: AUROC (una medida de 0,5, azar, a 1, acierto perfecto) de 0,8594 en la muestra de entrenamiento y 0,4642 en el periodo siguiente, peor que el azar. Cualquier regla de entrada calibrada con datos antiguos debe asumirse inestable. Los cambios de 2026 (reparto de comisiones de creador, ventanas anti-bot) no están reflejados en los demás estudios, que usan datos de 2024 y 2025.</li>
 </ol>
 <figure class="fig"><h4>Pérdida media tras la migración: compra al azar y compra filtrada</h4>
@@ -1615,6 +1656,24 @@ dfn.t:hover,dfn.t[data-open]{border-bottom-color:var(--ink);background:var(--acc
 <li>Retorno medio tras la primera mención de un KOL, poder predictivo de las menciones en X o Telegram, efecto disposición (vender pronto los ganadores y mantener los perdedores) y sobreoperación medidos en memecoins: sin estudios.</li>
 <li>Estabilidad de cualquier señal tras los cambios de 2026: el único dato es el colapso del AUROC de Kamat.</li>
 </ul>
+
+<h3>Por qué copiar a una wallet rentable no basta</h3>
+<p>La penalización por imitación es la diferencia entre el retorno de la wallet copiada y el retorno del copiador. En una curva de bonding (el mecanismo de precio de pump.fun, donde cada compra sube el precio de la siguiente), el copiador compra siempre en un punto más alto de la curva que la wallet copiada, aunque copie de forma inmediata. Luo y colaboradores (WWW 2026, arXiv 2601.08641) demuestran que la penalización es siempre positiva (Teorema 2). Identificar bien a la wallet no elimina esta pérdida.</p>
+<div class="tw"><table><caption>Retorno neto medio por memecoin en el conjunto de test. Fuente: Luo et al. (2026), Fig. 8</caption><thead><tr><th>Método de selección</th><th>Retorno de la wallet copiada</th><th>Retorno del copiador</th></tr></thead><tbody>
+<tr><td>Lasso (regresión lineal con penalización)</td><td>+9,2%</td><td>-5,8%</td></tr>
+<tr><td>NN (red neuronal)</td><td>+4,2%</td><td>-7,8%</td></tr>
+<tr><td>XGBoost (árboles de decisión potenciados)</td><td>+6,1%</td><td>-8,3%</td></tr>
+<tr><td>Sistema LLM sin ejemplos (zero-shot)</td><td>+6,2%</td><td>-0,2%</td></tr>
+<tr><td>Sistema multiagente del artículo</td><td>+14,4%</td><td>+2,9%</td></tr>
+</tbody></table></div>
+<p><strong>Lectura.</strong> XGBoost tiene el mejor AUC (0,727). El AUC mide la capacidad de ordenar wallets rentables por encima de las no rentables: 0,5 es azar y 1 es un orden perfecto. Aun así, el copiador pierde un 8,3%. Identificar bien la wallet no implica beneficio para quien copia.</p>
+<p><strong>Qué incluye y qué no incluye el +2,9%.</strong></p>
+<ul>
+<li>El cálculo (Lema 1) solo incluye el impacto en el precio de la curva con copia inmediata.</li>
+<li>No incluye la comisión de 1% por lado que cobra pump.fun, descrita en el propio artículo, ni priority fees (propinas pagadas para que la transacción se incluya antes), ni latencia, ni MEV (valor extraído por quien ordena las transacciones, por ejemplo mediante sandwiches).</li>
+<li>La validación es una sola partición cronológica 70/15/15 (entrenamiento, validación y test). No hay prueba en tiempo real.</li>
+</ul>
+<p><span class="tag inf">Inferencia</span> Con aproximadamente un 2% de comisión de ida y vuelta, el margen de +2,9% queda cerca de cero antes de priority fees. Un copiador manual que entra segundos después parte de una posición peor.</p>
 
 <h3>Estrategias distintas del trenching</h3>
 <p>Se revisaron once vías. La búsqueda no encontró ninguna con rentabilidad auditada, replicable y neta de costes para un minorista en 2025 y 2026. Contexto: la capitalización del sector memecoin era de unos 31.200 a 38.000 millones de dólares en septiembre de 2026, frente a 150.000 millones en el máximo de noviembre de 2024 (agregadores con cifras discrepantes, <span class="tag nv">No verificado</span>). Las cinco primeras se describen con detalle y las seis restantes se resumen en una tabla.</p>
