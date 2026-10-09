@@ -680,11 +680,11 @@ dfn.t:hover,dfn.t[data-open]{border-bottom-color:var(--ink);background:var(--acc
 
 <section class="mod" id="m3" aria-labelledby="m3h">
 <header class="mh"><p class="meta">Módulo 3 · <span data-rt>1 min de lectura</span></p><h2 id="m3h">Herramientas y configuración</h2>
-<p class="lead">Cómo separar tus wallets, proteger la frase semilla, elegir un terminal (la aplicación desde la que se compra y vende) según su coste real, analizar un token antes de comprar y configurar los parámetros de ejecución.</p></header>
+<p class="lead">Cómo separar tus wallets, proteger la frase semilla, elegir un terminal (la aplicación desde la que se compra y vende) según su coste real, qué herramientas se ven en las pantallas de traders conocidos, dónde ejecutan, tres flujos de trabajo paso a paso, analizar un token antes de comprar y configurar los parámetros de ejecución.</p></header>
 <div class="key" role="note" aria-labelledby="m3k"><h3 id="m3k">En 3 puntos</h3>
 <ol>
 <li>Usa una wallet de trading que contenga solo el bankroll (el dinero que puedes perder por completo). Los ahorros van a una wallet de custodia protegida con una hardware wallet (dispositivo físico que firma operaciones sin exponer la clave). La frase semilla se guarda en papel o metal, nunca en formato digital.</li>
-<li>Un terminal es la aplicación desde la que se compra y vende (Axiom, GMGN, Photon, Trojan, Fomo). Compáralos por la comisión realizada, la que pagan de verdad los usuarios (0,36% a 1,06%), y no por la comisión anunciada. Fomo cobra un mínimo de 0,95 USD por operación.</li>
+<li>Un terminal es la aplicación desde la que se compra y vende (Axiom, GMGN, Photon, Trojan, Fomo). Compáralos por la comisión realizada, la que pagan de verdad los usuarios (0,36% a 1,06%), y no por la comisión anunciada. Fomo cobra un mínimo de 0,95 USD por operación. Los traders cuya pantalla es visible ejecutan en terminales web (Axiom, Fomo, Terminal) y muchos reciben comisión por referido o patrocinio de la plataforma que muestran.</li>
 <li>Un slippage mínimo (diferencia máxima aceptada entre el precio esperado y el pagado), el modo MEV protegido y el análisis previo con herramientas como Bubblemaps y GMGN Monitor reducen la exposición a ataques sandwich. Las fuentes difieren en el orden de magnitud del daño.</li>
 </ol></div>
 
@@ -724,21 +724,65 @@ dfn.t:hover,dfn.t[data-open]{border-bottom-color:var(--ink);background:var(--acc
 <div class="chartwrap" id="c-term"></div>
 <p class="cap">Fuente: openchainbench.com sobre adaptadores de DeFiLlama. La comisión realizada incorpora referidos, descuentos y cashback; por eso difiere de la nominal. Las fuentes nominales se contradicen entre sí y axiompedia añade tramos de 0,95% a 0,75% para Axiom, no verificados. Regla de uso: calcula con la comisión realizada más alta de tu terminal si no conoces su nivel.</p></figure>
 <ul>
-<li><strong>Cuota de uso (contradictoria):</strong> Axiom 44,6%, Phantom 18,8%, Fomo 17,2%, Terminal 7,7% y Trojan 4,1% del volumen spot de Solana a 4 de junio según moby.win (sitio con interés comercial). Otra fuente (thelearningpill, 24-06) da ~70% a Axiom citando Dune. Los dos rangos son incompatibles y no se ha resuelto cuál es correcto; algunas cifras de terminales de esa segunda fuente son incoherentes y no se usan. El 3 de octubre, Fomo ya era el segundo por volumen.</li>
+<li><strong>Cuota medida por comisiones generadas (DefiLlama, 2026-10-09):</strong> en Solana, durante los 30 días anteriores, Axiom generó 34,6 M$ (54,0%), Fomo 14,4 M$ (22,5%), GMGN 7,0 M$ (10,9%), Terminal 5,8 M$ (9,0%), Trojan 1,1 M$ (1,7%) y Photon 0,36 M$ (0,6%), sobre un conjunto de 14 terminales y bots que suma 64,1 M$ (cálculo propio con los datos de la API pública de DefiLlama). Es una cuota de comisiones, no de volumen: depende de la comisión que cobra cada plataforma. Esta medición, más reciente y reproducible, es la referencia del curso y queda más cerca del primer rango de la viñeta siguiente que del segundo. <span class="tag ok">On-chain</span></li>
+<li><strong>Cuota de uso a 4 de junio (contradictoria; superada por la medición anterior):</strong> Axiom 44,6%, Phantom 18,8%, Fomo 17,2%, Terminal 7,7% y Trojan 4,1% del volumen spot de Solana a 4 de junio según moby.win (sitio con interés comercial). Otra fuente (thelearningpill, 24-06) da ~70% a Axiom citando Dune. Los dos rangos son incompatibles y no se ha resuelto cuál es correcto; algunas cifras de terminales de esa segunda fuente son incoherentes y no se usan. El 3 de octubre, Fomo ya era el segundo por volumen.</li>
 <li><strong>Comisión mínima de Fomo:</strong> 0,95 USD. En una orden de 10 USD la comisión explícita es 9,5%.</li>
 <li><strong>BullX NEO:</strong> trading desactivado el 1 de junio de 2026; sin reanudación a septiembre.</li>
+<li><strong>Documentación y reseñas, 2026-10-09:</strong> la documentación de GMGN fija una comisión del 1% por operación y un mínimo de 0,002 SOL de priority fee para activar el modo anti-MEV; Axiom aplica entre 0,95% (nivel inicial) y 0,75% (nivel máximo) netos de cashback, con priority fee y propina de 0,001 SOL por defecto (Coin Bureau, 2026-06-09, reseña con afiliados). Jupiter Trigger ofrece órdenes límite, stop-loss, trailing stop, OCO (toma de beneficios y stop emparejados) y DCA (compras repartidas en el tiempo); sus órdenes se guardan fuera de cadena y son privadas hasta su ejecución, con un mínimo de 10 USD, y la documentación consultada no indica comisión.</li>
 <li><strong>Padre:</strong> comprado por pump.fun el 24 de octubre de 2025 y renombrado Terminal; el token PADRE cayó entre 76% y 80% (anterior a 2026).</li>
-<li><strong>Axiom:</strong> ofrece perpetuos de Hyperliquid (contratos para apostar al precio de un activo) con apalancamiento de hasta 50x, es decir, con un importe 50 veces mayor que el dinero depositado <span class="tag nv">No verificado</span>. El apalancamiento multiplica el riesgo de liquidación (cierre forzoso de la posición, módulo 10).</li>
+<li><strong>Axiom:</strong> ofrece perpetuos de Hyperliquid (contratos para apostar al precio de un activo) con apalancamiento de hasta 50x, es decir, con un importe 50 veces mayor que el dinero depositado <span class="tag nv">No verificado</span>: lo indican dos reseñas con afiliación (Coin Bureau, 2026-06-09; MadeOnSol, 2026-09-30) y no hay documentación oficial accesible. El apalancamiento multiplica el riesgo de liquidación (cierre forzoso de la posición, módulo 10).</li>
 </ul>
+
+<h3>Qué usan los traders cuya pantalla es visible</h3>
+<p>Nadie puede observar con exactitud qué herramientas usa cada trader de primer nivel. Esta sección separa lo <strong>observado</strong> (fotogramas de sus propios vídeos, declaraciones propias con marca de tiempo y enlaces de referido en las descripciones) de la <strong>práctica común</strong> (lo que describen guías y comparadores, muchos con afiliación). Los subtítulos de YouTube son automáticos y pueden contener errores; los fotogramas se revisaron a 640x360 píxeles, suficientes para identificar la plataforma y la disposición, no para leer texto pequeño.</p>
+<div class="tw"><table class="wide"><thead><tr><th>Trader</th><th>Qué se observó</th><th>Tipo de evidencia</th><th>Confianza</th></tr></thead><tbody>
+<tr><td>Cented</td><td>Su vídeo del 2026-04-02 muestra la página de token de Axiom Pro: compra rápida sobre el gráfico (0,01 / 0,25 / 5 / 3 SOL), venta por porcentajes, panel Market, Limit y Adv, datos de holders, snipers, insiders y bundles, y pestañas de posiciones, holders y top traders. Declara que prefiere Axiom por su interfaz (0:28:13 de la entrevista de 2026-04-09), tiene una insignia de Axiom (0:26:58) y está patrocinado por Fomo (0:28:53).</td><td>Pantalla propia; declaración propia</td><td>Alta para Axiom en esa operación; media para el alcance de los vínculos comerciales</td></tr>
+<tr><td>Orangie</td><td>Su pantalla del 2026-07-22 es la aplicación web de Fomo con X en otra pestaña. Dice que opera sobre todo en Fomo y hace trenching (compra de lanzamientos muy recientes) en otra plataforma (0:22:16); usa filtros de comisiones globales pagadas, mínimo de 5 holders y migrados con 10.000 USD de capitalización; mantiene una lista de wallets etiquetadas, revisa clústeres con Bubblemaps (0:26:56) y recomienda seguir a las 50 mejores personas de Fomo (0:32:05).</td><td>Pantalla propia; declaración propia; enlace de referido de Fomo</td><td>Alta</td></tr>
+<tr><td>Cupsey</td><td>Empezó con un terminal tipo Photon sobre pump.fun (entrevista de 2026-08-11, 0:53:27) y usa dos monitores desde hace pocos meses (0:45:08). No declara qué terminal usa hoy. Un análisis externo (Gate Learn) infiere, por su volumen (unas 95.000 operaciones en tres meses), que probablemente automatiza la ejecución; es una hipótesis del analista, no una declaración suya.</td><td>Declaración propia; inferencia de un tercero</td><td>Baja para su herramienta actual</td></tr>
+<tr><td>Daumen</td><td>Usa dos wallet trackers (rastreadores de carteras): el integrado en el terminal, en una ventana aparte junto al escáner, y otro independiente para dimensionar posiciones (entrevista de 2026-07-06, 0:46:12 y 0:49:30). Sus vídeos enlazan a Padre (Terminal) con código de referido.</td><td>Declaración propia; enlace de referido</td><td>Media</td></tr>
+<tr><td>Cooker</td><td>Cita Axiom y GMGN como herramientas básicas de métricas de volumen (entrevista de 2025-08-07, 0:44:03). La atribución al invitado se deduce del contexto.</td><td>Declaración propia</td><td>Media</td></tr>
+<tr><td>Ansem, Euris, Gake, Jalen</td><td>No se localizó ninguna fuente en primera persona (pantalla, entrevista o publicación) que describa sus herramientas.</td><td>Ninguna</td><td>No evaluable</td></tr>
+</tbody></table></div>
+<div class="callout warn"><div class="ct">Qué no se puede concluir</div><p>La muestra son cuatro traders con material público. Un trader puede operar en una plataforma y promocionar otra: Cented opera en Axiom y está patrocinado por Fomo. El trader más citado por volumen de operaciones, Cupsey, no declara su terminal actual y existe la hipótesis de que automatiza. Copiar su configuración no reproduce su resultado: el módulo 7 mide que la rentabilidad de los mejores traders de Fomo no persiste.</p></div>
+
+<h3>Dónde compran y venden, y por qué</h3>
+<div class="tw"><table class="wide"><thead><tr><th>Vía de ejecución</th><th>Ejemplos</th><th>Motivos documentados</th><th>Evidencia y confianza</th></tr></thead><tbody>
+<tr><td>Terminal web conectado a una wallet propia o integrada</td><td>Axiom, Fomo, Terminal (ex Padre), GMGN, Photon</td><td>Velocidad de ejecución, escáner de lanzamientos (Pulse, Trenches, Memescope), órdenes límite, take-profit y stop-loss, modos MEV (Off, Reduced, Secure), rastreo de wallets integrado, y en Fomo el componente social. Los motivos que declaran los propios traders son la interfaz (Cented) y el acceso a los feeds de otros traders (Orangie).</td><td>Pantallas y declaraciones de Cented, Orangie y Daumen; comisiones de DefiLlama. Confianza media (muestra pequeña).</td></tr>
+<tr><td>Bot de Telegram</td><td>Trojan, BONKbot, Maestro</td><td>Comodidad en móvil. Generan el 1,7%, 0,2% y 0,6% de las comisiones del conjunto de Solana (DefiLlama). Ningún trader con pantalla visible los usa como medio principal.</td><td>Datos agregados; confianza alta sobre la cuota, baja sobre el uso por top traders.</td></tr>
+<tr><td>Agregador y órdenes programadas</td><td>Jupiter (Trigger y DCA)</td><td>Órdenes OCO y DCA privadas hasta su ejecución, útiles para tokens ya graduados y salidas escalonadas.</td><td>Documentación oficial; no se observó a ningún top trader usándolo. Confianza baja.</td></tr>
+<tr><td>Ejecución propia por software</td><td>API o programa propio</td><td>Latencia mínima y volumen muy alto. Es una hipótesis para traders con decenas de miles de operaciones, no un hecho observado.</td><td>Inferencia de un tercero. Confianza baja a media.</td></tr>
+</tbody></table></div>
 
 <h3>Analítica previa a la compra</h3>
 <ul>
 <li><strong>Bubblemaps:</strong> visualiza qué wallets están conectadas entre sí por transferencias y concentran suministro. El 15 de septiembre de 2026 se rediseñó con un feed curado que descarta tokens con bundles y clusters, una puntuación de concentración de insiders y un swap integrado. Opera en Ethereum, Solana, Base, BNB y TON. La propia herramienta aclara que ninguna señal prueba manipulación por sí sola: bundles y clusters coinciden también con airdrops y market makers.</li>
-<li><strong>Kolscan:</strong> tabla permanente de PnL realizado de wallets de KOL (líderes de opinión pagados o promocionales).</li>
+<li><strong>Kolscan:</strong> tabla permanente de PnL realizado de wallets de KOL (líderes de opinión pagados o promocionales). Pump.fun lo adquirió el 10 de julio de 2025 y lo mantiene gratuito (The Block). Un panel de diez traders (2025-06-11) opina que perdió relevancia como fuente de copy trading; es una opinión sin medición. No se halló dato de qué plataforma usan las wallets que Kolscan rastrea.</li>
 <li><strong>GMGN Monitor:</strong> muestra los primeros 70 compradores y los snipers (bots que compran en los primeros instantes) de un token.</li>
 <li><strong>Dexscreener:</strong> páginas de precio, liquidez y volumen por par. No hay datos verificables de 2026 de Dexscreener, Birdeye, RugCheck, Solsniffer, Cielo, Nansen ni Arkham en la investigación, por lo que no se cuantifican.</li>
 <li>Un <strong>bundle</strong> es un conjunto de transacciones enviadas juntas que permiten a un mismo actor comprar desde muchas wallets en el mismo bloque. Un <strong>cluster</strong> es un grupo de wallets enlazadas por fondos comunes.</li>
 </ul>
+
+<h4>Mapa de herramientas por categoría</h4>
+<details class="more"><summary>Ver tabla completa (17 filas)</summary><div class="tw"><table class="wide"><thead><tr><th>Herramienta</th><th>Categoría</th><th>Para qué la usan los traders observados</th><th>Evidencia y confianza</th></tr></thead><tbody>
+<tr><td>Axiom</td><td>Ejecución, escáner, rastreo de wallets</td><td>Escáner Pulse, compra rápida y presets, órdenes límite, panel de top traders y rastreo de X.</td><td>Pantalla de Cented; documentación y reseñas. Alta.</td></tr>
+<tr><td>Fomo</td><td>Ejecución y atención social</td><td>Operar, seguir a otros traders, ver su feed y recibir notificaciones en el móvil.</td><td>Pantalla y declaración de Orangie; patrocinio de Cented. Alta.</td></tr>
+<tr><td>Terminal (ex Padre)</td><td>Ejecución, escáner Trenches</td><td>Trenching con etiquetas de wallets; órdenes límite, stop-loss, take-profit y trailing stop.</td><td>Enlaces de referido de Daumen y de un anfitrión; reseña con afiliación. Media.</td></tr>
+<tr><td>GMGN</td><td>Ejecución, rastreo de wallets, alertas</td><td>Métricas básicas, Monitor de snipers, alertas y copy trading.</td><td>Declaración de Cooker; documentación oficial. Media.</td></tr>
+<tr><td>Photon</td><td>Ejecución, escáner Memescope</td><td>Origen del trenching de Cupsey; hoy genera el 0,6% de las comisiones de Solana.</td><td>Declaración de Cupsey; DefiLlama. Alta sobre el pasado, baja sobre el uso actual.</td></tr>
+<tr><td>Jupiter</td><td>Agregador y órdenes</td><td>Órdenes límite, OCO y DCA privadas hasta su ejecución.</td><td>Documentación. No observado en top traders. Baja.</td></tr>
+<tr><td>Trojan, BONKbot, Maestro</td><td>Ejecución por bot de Telegram</td><td>Comodidad en móvil.</td><td>DefiLlama. Baja para top traders.</td></tr>
+<tr><td>Bubblemaps</td><td>Análisis de holders</td><td>Revisar clústeres y wallets conectadas antes de comprar o de aumentar posición.</td><td>Declaración de Orangie. Alta.</td></tr>
+<tr><td>RugCheck</td><td>Comprobación de seguridad</td><td>Informe de riesgos, bloqueo de liquidez, principales holders, autoridades de acuñación y congelación.</td><td>Documentación; no observado en top traders. Baja.</td></tr>
+<tr><td>Tracker de wallets integrado y externo</td><td>Rastreo de wallets</td><td>Ver qué compran carteras etiquetadas, si hay wallets que concentran suministro o grupos coordinados, y dimensionar posiciones.</td><td>Orangie y Daumen; panel de traders. Alta.</td></tr>
+<tr><td>Kolscan</td><td>Rastreo de wallets de KOL</td><td>Clasificación de PnL de KOL.</td><td>The Block (2025-07-10). Baja sobre el uso por top traders.</td></tr>
+<tr><td>Cielo</td><td>Rastreo de wallets</td><td>No verificado de primera mano.</td><td>Página no accesible. Baja.</td></tr>
+<tr><td>X (listas, X Pro, rastreadores)</td><td>Atención y narrativa</td><td>Detectar narrativas, revisar la cuenta del proyecto y el perfil del desarrollador. X Pro exige Premium+ (40 USD al mes) desde 2026-03-26.</td><td>Orangie (pestaña de X en pantalla); MacRumors. Alta.</td></tr>
+<tr><td>Telegram y Discord</td><td>Atención y alertas</td><td>Grupos de chat de pequeños círculos de traders y alertas de herramientas.</td><td>Declaraciones de Cented, Orangie, Daumen y Cupsey. Media.</td></tr>
+<tr><td>TradingView</td><td>Gráficos</td><td>Gráfico integrado en el terminal; Cented lo usa dentro de Axiom.</td><td>Pantalla de Cented. Media.</td></tr>
+<tr><td>DexScreener, Birdeye</td><td>Gráficos y descubrimiento</td><td>Páginas de precio, liquidez y volumen por par.</td><td>Guías con afiliación; no observado en pantallas. Baja.</td></tr>
+<tr><td>Solscan, Solana FM</td><td>Explorador de bloques</td><td>Comprobar transferencias y propietarios de wallets.</td><td>Práctica común; sin evidencia de pantalla. Baja.</td></tr>
+<tr><td>pump.fun</td><td>Lanzador y fuente de lanzamientos</td><td>Origen de los tokens que filtran los terminales; Cupsey empezó refrescando su lista.</td><td>Declaración de Cupsey; DefiLlama. Alta.</td></tr>
+</tbody></table></div></details>
 
 <h3>Parámetros de ejecución</h3>
 <details class="more"><summary>Ver tabla completa (5 filas)</summary><div class="tw"><table class="wide"><thead><tr><th>Parámetro</th><th>Definición</th><th>Uso y datos</th></tr></thead><tbody>
@@ -756,16 +800,68 @@ dfn.t:hover,dfn.t[data-open]{border-bottom-color:var(--ink);background:var(--acc
 <p>Los dos conjuntos son incompatibles en orden de magnitud. La investigación lo atribuye probablemente a metodologías de detección distintas (sandwiches "wide" de varios slots frente a sandwiches simples). Un extracto sin verificar dice que el 8 de abril de 2026 se corrigió el sandwich simple en Solana y que persisten variantes multi-slot. Otras cifras: Helius estima 370M a 500M USD extraídos en 16 meses y ~45M USD mensuales (probablemente 2025, <span class="tag nv">No verificado</span> para 2026).</p>
 <p>En Robinhood Chain, Bitquery documentó del 12 al 25 de septiembre de 2026 que tres grupos de bots hicieron 3.532 sandwiches sobre 2.319 wallets de Fomo, con una pérdida de ~181.000 USD frente a la cotización, y una ventana de 0,4 segundos entre el pago en Solana (Relay) y la ejecución.</p>
 
+<h3>Tres flujos de trabajo paso a paso</h3>
+<p>Cada flujo combina lo que muestran los traders observados con la documentación de las herramientas. Son ejemplos de proceso, no recomendaciones de inversión. Practícalos primero con importes mínimos o en simulación (módulo 13).</p>
+<h4>Flujo 1: nuevo lanzamiento en pump.fun</h4>
+<ol>
+<li>Abre la lista de lanzamientos recientes del terminal (Pulse en Axiom, Trenches en Terminal, Memescope en Photon).</li>
+<li>Aplica filtros: comisiones globales pagadas mínimas (Orangie usa entre 0,1 y 0,5 SOL), un mínimo de 5 holders, los lanzadores activos y la capitalización de los migrados (10.000 USD en su ejemplo).</li>
+<li>Lee el panel del token: porcentaje del top 10, del desarrollador, de snipers, de insiders y de bundles.</li>
+<li>Abre Bubblemaps y comprueba clústeres y wallets conectadas (módulo 5).</li>
+<li>Revisa en X la cuenta del proyecto y el origen de fondos de la wallet del desarrollador.</li>
+<li>Decide el importe antes de entrar y usa un botón de compra rápida de importe fijo; mantén priority fee y propina bajas y el modo MEV protegido.</li>
+<li>Define la salida antes de comprar: venta por porcentajes u órdenes de take-profit y stop-loss del terminal (módulo 11).</li>
+<li>Vigila en el tracker las wallets etiquetadas que compran o venden el mismo token.</li>
+</ol>
+<h4>Flujo 2: token graduado con narrativa en X</h4>
+<ol>
+<li>Detecta la narrativa en X (listas o rastreador integrado) o en el feed de otros traders de Fomo.</li>
+<li>Localiza el token y comprueba liquidez, volumen y antigüedad del par en el terminal o en DexScreener.</li>
+<li>Revisa holders con Bubblemaps y el informe de riesgos de RugCheck o del propio terminal.</li>
+<li>Comprueba si wallets de tu lista ya participan, qué importe pusieron, cuánto tiempo mantuvieron otros tokens y a qué capitalización entraron (Daumen describe este análisis retroactivo).</li>
+<li>Entra con slippage mínimo y modo MEV protegido (más abajo, Parámetros de ejecución).</li>
+<li>Si no vas a vigilar el gráfico, programa órdenes límite o una orden OCO de Jupiter Trigger con salidas escalonadas.</li>
+<li>Sal cuando se invalide la narrativa y registra la operación en el diario (módulo 12).</li>
+</ol>
+<h4>Flujo 3: seguimiento de una cartera</h4>
+<ol>
+<li>Elige carteras por historial amplio y no por una racha corta (módulos 8 y 9). Fuentes de candidatos: clasificación de Fomo, Kolscan, GMGN Monitor y la tabla de traders de Axiom.</li>
+<li>Añade la dirección al tracker del terminal y etiquétala.</li>
+<li>Activa alertas (notificación en el móvil en Fomo, Telegram en GMGN).</li>
+<li>Cuando la cartera compre, no copies: abre el token y mira cuánto compró, a qué capitalización y si envió fondos a otras wallets.</li>
+<li>Espera confluencia con otras señales: varias carteras independientes, un catalizador y una distribución de holders aceptable.</li>
+<li>Si usas copy trading automático, limita el importe y mide el retraso: la copia siempre llega después del original, y el módulo 9 explica por qué copiar una cartera rentable no basta.</li>
+</ol>
+
+<h3>Disposición de pantalla</h3>
+<ul>
+<li><strong>Observado:</strong> Orangie trabaja con el terminal (Fomo) a pantalla completa en el navegador y X en otra pestaña. Cented trabaja con Axiom Pro a pantalla completa: gráfico en el centro, panel de operaciones a la derecha y una barra inferior con wallet, X, Discover, Pulse, PnL y Alpha. Daumen separa el tracker integrado en una ventana junto al escáner y mantiene otro tracker para dimensionar. Cupsey usa dos monitores desde hace pocos meses.</li>
+<li><strong>Práctica común, sin pantalla verificada:</strong> escáner de lanzamientos y página de token en el terminal, tracker de wallets en una segunda ventana, X, Telegram o Discord y Bubblemaps en pestañas fijas.</li>
+<li>Un solo monitor basta: Cupsey operó con un portátil y un monitor durante unos dos años.</li>
+</ul>
+
 <h3>Configuración inicial, paso a paso</h3>
 <ol>
 <li>Crea una wallet nueva para trading, distinta de cualquier wallet con ahorros. Anota la frase semilla en papel.</li>
 <li>Define el bankroll (módulo 11) y transfiere solo esa cantidad.</li>
 <li>Elige un terminal. Compara comisión realizada, no la nominal. Comprueba qué cadenas admite.</li>
 <li>Configura el slippage al mínimo que ejecute y un tope de priority fee. Activa el modo MEV protegido y mide si la ejecución se retrasa.</li>
-<li>Abre Bubblemaps y GMGN Monitor en pestañas fijas. Úsalos antes de cada compra (módulo 5).</li>
+<li>Abre Bubblemaps y GMGN Monitor en pestañas fijas, y el tracker de wallets del terminal en una ventana aparte junto al escáner. Úsalos antes de cada compra (módulo 5).</li>
 <li>Activa la exportación de historial de operaciones (módulo 14).</li>
 <li>Haz una operación de prueba de importe mínimo y compara lo recibido con la cotización, para medir el coste real.</li>
 </ol>
+
+<h3>Riesgos de las herramientas y de quien las recomienda</h3>
+<div class="tw"><table class="wide"><thead><tr><th>Riesgo</th><th>Hecho documentado</th><th>Fuente y confianza</th></tr></thead><tbody>
+<tr><td>Custodia de claves en bots</td><td>En marzo de 2024 se vaciaron unas 302 cuentas (2.808 SOL, unos 523.000 USD) vinculadas al bot Solareum. BONKbot negó el vínculo y atribuyó las pérdidas a usuarios que habían exportado sus claves. La causa exacta no se estableció.</td><td>Decrypt. Alta sobre el hecho, media sobre la causa.</td></tr>
+<tr><td>Extensiones de navegador maliciosas</td><td>Socket documentó el 2026-09-09 que J7Tracker, VREO, GhostApe y GhostApe Color (Chrome), y VREO y Orbit Tracker (Firefox) robaban tokens de sesión y datos de wallet de Axiom y Padre. Las de Chrome se retiraron en julio de 2026; Orbit Tracker seguía activa en Firefox. Un trader mostraba J7 Tracker en pantalla, lo que indica uso extendido de ese tipo de extensiones.</td><td>Socket (2026-09-09). Alta.</td></tr>
+<tr><td>Acceso del operador</td><td>El caso de febrero de 2026 en Axiom (ver arriba) muestra que el operador puede ver posiciones de wallets.</td><td>CoinDesk. Alta.</td></tr>
+<tr><td>Perfiles falsos que llevan a Discord o Telegram</td><td>Cupsey explica que un perfil falso con unos 300.000 seguidores dirigía a personas a un Discord para vaciar sus wallets (entrevista de 2026-08-11, 0:23:00).</td><td>Declaración propia. Media.</td></tr>
+<tr><td>Recomendaciones con comisión por referido</td><td>Cented está patrocinado por Fomo y tiene insignia de Axiom; Orangie enlaza un referido de Fomo; Daumen y un anfitrión enlazan referidos de Padre; el vídeo de RED enlaza referidos de GMGN y Axiom. En Fomo, cada usuario es también un código de referido que cobra una parte de las comisiones de sus invitados (páginas de afiliados, confianza baja).</td><td>Descripciones de vídeo. Alta sobre los enlaces.</td></tr>
+<tr><td>Guías y comparadores con afiliación</td><td>Coin Bureau, MadeOnSol y Web3WAGMI declaran enlaces de afiliado. Sus tablas de comisiones y cuotas de mercado difieren entre sí (por ejemplo, Axiom entre 44% y 73% de cuota según la fuente).</td><td>Cada artículo. Alta.</td></tr>
+<tr><td>Comisión mínima</td><td>En Fomo, una orden de 10 USD paga el 9,5% de comisión explícita por el mínimo de 0,95 USD.</td><td>Ver arriba. Alta.</td></tr>
+</tbody></table></div>
+<div class="callout"><div class="ct">Cómo leer una recomendación de herramienta</div><p>Una recomendación no es una prueba de uso exclusivo ni de ventaja. Comprueba si el enlace lleva un código de referido, qué comisión cobra la plataforma y si el trader declara su vínculo. Instala solo extensiones publicadas por el propio terminal y revisa sus permisos. Si una extensión pide acceso a la sesión de tu terminal, asume que puede leer tu wallet integrada.</p></div>
 
 <details class="src"><summary>Fuentes del módulo</summary><ul>
 <li><a href="https://openchainbench.com/benchmarks/solana-trading-platform-wars">openchainbench, Solana trading platform wars</a></li>
@@ -782,6 +878,26 @@ dfn.t:hover,dfn.t[data-open]{border-bottom-color:var(--ink);background:var(--acc
 <li><a href="https://bitquery.io/investigations/fomo-app-front-running-robinhood-chain">Bitquery, front-running a wallets de Fomo</a></li>
 <li><a href="https://klimentdukovski.com/articles/fomo-app-review/">Dukovski, reseña de Fomo</a></li>
 <li><a href="https://ventureburn.com/binance-wallet-on-chain-trade-win-season-3-guide/">Ventureburn, Binance Wallet Trade and Win S3</a></li>
+<li><a href="https://api.llama.fi/overview/fees/solana?excludeTotalDataChart=true&amp;excludeTotalDataChartBreakdown=true&amp;dataType=dailyFees">DefiLlama, comisiones por protocolo en Solana (API pública, consulta 2026-10-09)</a></li>
+<li><a href="https://www.youtube.com/watch?v=4euyrV50ovw">Cented, vídeo con pantalla de Axiom Pro (2026-04-02)</a></li>
+<li><a href="https://www.youtube.com/watch?v=w0WtVwlR3cY">rasmr, entrevista a Cented (2026-04-09)</a></li>
+<li><a href="https://www.youtube.com/watch?v=Uh777mcVd3Y">Orangie Web3, preguntas sobre trading con pantalla de Fomo (2026-07-22)</a></li>
+<li><a href="https://www.youtube.com/watch?v=EUybINsX9QU">rasmr, entrevista a Cupsey (2026-08-11)</a></li>
+<li><a href="https://www.youtube.com/watch?v=dp_c19zy0ig">Solina, entrevista a Daumen (2026-07-06)</a></li>
+<li><a href="https://www.youtube.com/watch?v=1aiq7iDcDJA">Daumen, vídeo con enlace de referido de Padre (2026-08-12)</a></li>
+<li><a href="https://www.youtube.com/watch?v=yvdrCUTVj-A">Handsome Finance, entrevista a Cooker (2025-08-07)</a></li>
+<li><a href="https://www.youtube.com/watch?v=_J3dgcjMQK0">OGshoots, panel de diez traders (2025-06-11)</a></li>
+<li><a href="https://www.youtube.com/watch?v=7_jqFOjxldE">RED, vídeo con enlaces de referido de GMGN y Axiom (2026-08-16)</a></li>
+<li><a href="https://www.gate.com/learn/articles/meme-whale-trading-secrets-high-frequency-gaming-and-covert-manipulation-behind-high-returns/10966">Gate Learn, análisis de la ejecución de Cupsey</a></li>
+<li><a href="https://docs.gmgn.ai/index/gmgn-fees-settings.md">GMGN, documentación de comisiones</a></li>
+<li><a href="https://coinbureau.com/review/axiom-trade-review">Coin Bureau, reseña de Axiom (2026-06-09, con afiliados)</a></li>
+<li><a href="https://madeonsol.com/blog/padre-vs-axiom-solana-trading-terminal">MadeOnSol, Padre frente a Axiom (2026-06-06, actualizado 2026-09-30, con afiliados)</a></li>
+<li><a href="https://developers.jup.ag/docs/trigger">Jupiter, documentación de Trigger</a></li>
+<li><a href="https://www.theblock.co/post/362119/pump-fun-makes-first-acquisition-purchases-solana-based-copy-trading-wallet-tracker-kolscan">The Block, pump.fun adquiere Kolscan (2025-07-10)</a></li>
+<li><a href="https://socket.dev/blog/chrome-firefox-crypto-data-theft">Socket, extensiones maliciosas contra Axiom y Padre (2026-09-09)</a></li>
+<li><a href="https://decrypt.co/224371/solana-telegram-trading-bot-shut-down-users-drained-523k">Decrypt, cierre de Solareum tras el vaciado de 523.000 USD (2024)</a></li>
+<li><a href="https://www.macrumors.com/2026/03/26/x-pro-premium-plus-restriction">MacRumors, X Pro exige Premium+ (2026-03-26)</a></li>
+<li><a href="https://rugcheck.xyz">RugCheck</a></li>
 </ul></details>
 <div class="todo"><h3 id="m3t">Qué hacer con esto</h3>
 <ol>
@@ -2700,7 +2816,7 @@ dfn.t:hover,dfn.t[data-open]{border-bottom-color:var(--ink);background:var(--acc
 <div class="quiz" data-quiz="m15"></div>
 <nav class="pn" aria-label="Navegación entre módulos"><a class="prev" href="#m14" rel="prev"><span class="pl">Anterior</span><span class="pt">Fiscalidad en España</span></a></nav>
 </section>
-<p class="footer">Datos con fecha de corte 2026-10-04. Material educativo, no asesoramiento financiero ni fiscal.</p>
+<p class="footer">Datos con fecha de corte 2026-10-04, salvo el módulo 3, ampliado con datos del 2026-10-09. Material educativo, no asesoramiento financiero ni fiscal.</p>
 </main>
 </div>
 </div>
@@ -3089,7 +3205,10 @@ m3:[
  ["¿Qué terminal tenía la comisión realizada más baja el 2026-10-03?",["Photon (1,06%)","GMGN (0,63%)","Axiom (0,36%)","Trojan (0,66%)"],2,"Axiom, con 0,36% (openchainbench). Photon tuvo la más alta, 1,06%."],
  ["Con una orden de 10 USD en Fomo y una comisión mínima de 0,95 USD, ¿qué comisión explícita se paga?",["0,5%","0,95%","5%","9,5%"],3,"0,95 / 10 = 9,5%. El mínimo hace que las órdenes pequeñas sean muy caras."],
  ["¿Qué efecto tiene un slippage alto?",["Reduce las comisiones","Aumenta la exposición a sandwiches","Acelera la transacción","Elimina el impacto de precio"],1,"Un slippage alto permite que la orden se ejecute a peor precio y atrae a bots sandwich."],
- ["¿Qué muestra el caso Axiom de febrero de 2026?",["Las wallets de los usuarios son inaccesibles para el terminal","Un empleado pudo rastrear wallets privadas con herramientas internas","El terminal cobra el doble","Axiom cerró"],1,"ZachXBT alegó que un empleado usó herramientas internas para rastrear wallets privadas; Axiom retiró el acceso."]
+ ["¿Qué muestra el caso Axiom de febrero de 2026?",["Las wallets de los usuarios son inaccesibles para el terminal","Un empleado pudo rastrear wallets privadas con herramientas internas","El terminal cobra el doble","Axiom cerró"],1,"ZachXBT alegó que un empleado usó herramientas internas para rastrear wallets privadas; Axiom retiró el acceso."],
+ ["¿Qué terminal generó la mayor parte de las comisiones en Solana en los 30 días anteriores al 2026-10-09 (DefiLlama)?",["GMGN","Axiom (54,0%)","Photon","Trojan"],1,"Axiom generó 34,6 M$ sobre un conjunto de 64,1 M$; después Fomo (22,5%) y GMGN (10,9%). Es cuota de comisiones, no de volumen."],
+ ["¿Por qué debe leerse con cautela la recomendación de un terminal hecha por un trader conocido?",["Porque los terminales están prohibidos","Porque muchos reciben comisión por referido o patrocinio de la plataforma","Porque ningún trader usa terminales","Porque las recomendaciones siempre son falsas"],1,"Cented (Fomo y Axiom), Orangie (Fomo), Daumen (Padre) y RED (GMGN y Axiom) enlazan referidos o declaran patrocinio."],
+ ["¿Qué robaban las extensiones J7Tracker y VREO según Socket (2026-09-09)?",["Los precios de los tokens","Tokens de sesión y datos de wallet de Axiom y Padre","Las comisiones del terminal","Las órdenes límite pendientes"],1,"Interceptaban material de sesión autenticada de los usuarios de Axiom y Padre."]
 ],
 m4:[
  ["Con una posición de 0,17 SOL, 1,04% de launchpad, 0,5% de terminal y 0,005 SOL de priority fee por lado, ¿cuál es el coste aproximado de ida y vuelta?",["1%","3%","9%","25%"],2,"Unos 8,9%: 3,08% proporcional más 5,88% de priority fees (0,01 / 0,17)."],
