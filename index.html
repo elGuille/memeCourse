@@ -1265,6 +1265,16 @@ dfn.t:hover,dfn.t[data-open]{border-bottom-color:var(--ink);background:var(--acc
 <li>Costes: mínimo de 0,95 USD o 0,50%; un usuario cita 38% de impacto de precio en una orden de 500 USD.</li></ul></li>
 <li><strong>Procedencia de las ganancias.</strong> PONS es un token del que sale una parte relevante del PnL de Unipcs y AJC, y proviene de un launchpad con un esquema de bundling documentado (18,43M USD, 53 lanzamientos). No hay prueba de que ellos estén vinculados <span class="tag nv">No verificado</span>.</li>
 </ol>
+<h3>Medición propia: la rentabilidad de los mejores traders de Fomo no persiste</h3>
+<p><span class="tag ok">Investigación propia, 2026</span> El proyecto de investigación midió si los traders con mejor resultado en una mitad del periodo siguen siendo los mejores en la otra (FM2, decisión D-091). Es la prueba directa de si un ranking sirve para elegir a quién observar o copiar.</p>
+<ul>
+<li><strong>Datos.</strong> Ranking de Fomo leído el 4 de octubre de 2026 (377 perfiles). Se obtuvieron las operaciones de 174 perfiles (cobertura parcial: 174 de 377); los 203 restantes no se leyeron. Historial en cadena de 90 días (59.105 swaps). Reclasificando compras y ventas en USDC, el cruce entre el perfil y la cadena coincide en el 99,7% al 100%.</li>
+<li><strong>Muestra elegible.</strong> Tras excluir 27 carteras con más de 1.500 transacciones por ventana (consideradas bots) y aplicar los requisitos de la prueba, quedaron 34 traders elegibles. La tenencia mediana es de 11,7 horas.</li>
+<li><strong>Resultado.</strong> El tercil superior de la primera mitad (11 traders) sumó <strong>−798.651 USD</strong> en la segunda mitad (intervalo de confianza al 95% de −1,21 M a −0,46 M USD; mediana −65.793 USD). La correlación de rangos de Spearman entre las dos mitades es <strong>−0,16</strong> (intervalo de −0,53 a +0,23). Ninguna prueba de sensibilidad situó el límite inferior por encima de cero.</li>
+<li><strong>Conclusión del proyecto.</strong> Los mejores traders de Fomo no siguieron siendo los mejores; copiarlos no tiene base en estos datos y el paso de simular la copia no se ejecutó.</li>
+</ul>
+<p><span class="tag nv">Limitaciones</span> Cobertura parcial (174 de 377 perfiles); solo 34 traders elegibles y 11 en el tercil superior, una muestra pequeña con un intervalo amplio (el de la correlación incluye valores positivos); 90 días de historial, un solo periodo de mercado; la exclusión de bots depende de un umbral de transacciones. El resultado no demuestra que ningún trader tenga habilidad: indica que el ranking de beneficio pasado no la identifica en esta muestra. Coincide con el aviso de este módulo sobre el sesgo de supervivencia y el beneficio concentrado en pocas posiciones.</p>
+
 <div class="callout info"><div class="ct">Uso recomendado de Fomo</div><p>Como herramienta de observación: anota qué compran 3 o 5 traders y a qué mcap, y contrasta con el precio 1 hora y 24 horas después. No copies con dinero hasta completar el módulo 13.</p></div>
 
 <details class="src"><summary>Fuentes del módulo</summary><ul>
@@ -1285,6 +1295,7 @@ dfn.t:hover,dfn.t[data-open]{border-bottom-color:var(--ink);background:var(--acc
 <li><a href="https://bitquery.io/investigations/fomo-app-front-running-robinhood-chain">Bitquery, front-running en Robinhood Chain</a></li>
 <li><a href="https://www.theblock.co/news/defi/2026-09-27-onchain-analyst-links-18-4-million-in-robinhood-chain-memecoin-extractions-to-single-rug-pull-operation-416960">The Block, 18,4M USD extraídos (2026-09-27)</a></li>
 <li><a href="https://medium.com/@fxmbrand/how-to-copy-trade-fomo-wallets-with-dawn-a-practical-guide-4e58a9156b3f">Medium, copiar wallets de Fomo con Dawn</a></li>
+<li>Investigación propia, 2026: informe FM2 (persistencia de los traders del ranking de Fomo) y decisión D-091.</li>
 </ul></details>
 <div class="todo"><h3 id="m7t">Qué hacer con esto</h3>
 <ol>
@@ -1728,6 +1739,19 @@ dfn.t:hover,dfn.t[data-open]{border-bottom-color:var(--ink);background:var(--acc
 <tr><td><strong>11. Mercados de predicción y de atención</strong>.</td><td>Zora lanzó mercados de atención en Solana el 2026-02-17: a los 30 minutos, el token del propio mercado tenía 70.000 $ de capitalización y 170.000 $ de volumen. Hubo categorías con subidas de más del 5.500%, con volumen limitado. Sin datos de rentabilidad de ningún participante.</td><td>Baja. Experimental y con liquidez baja.</td></tr>
 </tbody></table></div>
 
+<h3>Mediciones propias del proyecto de investigación (2026)</h3>
+<p><span class="tag ok">Investigación propia, 2026</span> Además de los estudios anteriores, el proyecto midió varias vías con reglas fijadas antes de ver los datos, costes incluidos. Todas están resumidas en la tabla. Ninguna produjo una estrategia rentable y replicable.</p>
+<div class="tw"><table class="wide"><caption>Resultados propios por vía (los informes se citan por su código)</caption><thead><tr><th>Vía</th><th>Resultado medido</th><th>Limitaciones</th></tr></thead><tbody>
+<tr><td><strong>Copiar carteras rentables</strong> (K1, V1; decisión D-083)</td><td>Dentro de muestra, copiar con retraso cero da +23,06 SOL; con un slot de retraso (unos 0,4 s), −320,87 SOL. Fuera de muestra el resultado principal es −132,41 SOL sobre 873,20 SOL invertidos (intervalo de −172,14 a −96,53) y es negativo incluso con retraso cero (−43,59 SOL). Dejar abiertas las posiciones sin vender reduce de 6.736,71 a 2.256,08 SOL el resultado de las 525 carteras estudiadas.</td><td>Simulación sobre un corpus propio, 0,1 SOL por copia; el corpus no incluye el slot y la conversión de slots a segundos es una aproximación (la conclusión no depende de ella, porque el resultado fuera de muestra ya es negativo con retraso cero).</td></tr>
+<tr><td><strong>Traders del ranking de Fomo</strong> (FM2; D-091)</td><td>El tercil superior de la primera mitad perdió 798.651 USD en la segunda; correlación de rangos −0,16.</td><td>34 traders elegibles; cobertura parcial, 174 de 377 perfiles (módulo 7).</td></tr>
+<tr><td><strong>Comprar y mantener tokens graduados</strong> (G1a, G1d; D-085, D-086)</td><td>Pérdida media neta de entre el 11% y el 52% según el momento de entrada, de 0 minutos a 7 días tras la graduación. Ninguna de las 330 celdas con entrada de 1 a 72 horas tras la graduación y tenencia de 1, 3 o 7 días tuvo media neta positiva. Referencias de −17,5% a −52,4% con 0,1 SOL.</td><td>Muestras de junio a octubre de 2026. El colector no registra las retiradas de liquidez (2.930 caídas de más del 50% en el pool), por lo que el resultado es optimista para el comprador.</td></tr>
+<tr><td><strong>Perpetuos de memecoins en Hyperliquid</strong> (HL1; D-087)</td><td>Ninguna celda con media neta positiva y límite inferior del intervalo por encima de cero. Corto a 14 días: gana el 61%, mediana +7,1%, media +2,0% (intervalo de −4,2% a +7,9%).</td><td>36 celdas con al menos 100 operaciones; la cola derecha (5% de operaciones con pérdidas superiores al 50%) anula la ventaja de la mediana (módulo 11).</td></tr>
+<tr><td><strong>Corto tras el alta de un perpetuo</strong> (HL2; D-088)</td><td>En 701 altas de Binance desde 2023: corto 24 horas tras el alta con salida a 72 horas, +0,90% (intervalo de −1,09% a +3,07%); corto a 7 días con salida a 14 días, +0,34% (intervalo de −4,01% a +4,91%). No confirmado.</td><td>Solo Binance (la réplica en Bybit no se ejecutó). Las liquidaciones y el funding negativo anulan la media aunque cerca del 60% de las operaciones gana.</td></tr>
+<tr><td><strong>Carry de funding</strong> (HL3; D-089)</td><td>Dos variantes. Posición permanente en BTC y ETH: +8,88% anual en la serie completa, pero +3,24% en el último año, por debajo de la referencia de 4% en USDC. Rotación entre cinco activos de mayor funding: +5,14% anual, con −1,15% en la segunda mitad y −0,19% en el último año.</td><td>Contado de Binance para 95 de 119 perpetuos; capacidad estimada de unos 115.000 USD para la variante de BTC y ETH, con un techo de unos 3.700 EUR al año. Se declaró que una variante de reposición de margen se vio antes de fijar la principal.</td></tr>
+<tr><td><strong>Señal de aprendizaje automático (Kronos)</strong> (KR1; D-090)</td><td>Coeficiente de información por rangos de 0,0098: señal mínima y positiva. Resultado bruto −9,8% anual y neto −166,5% anual; la rotación cada 8 horas costó unos 155% anual.</td><td>2.475 velas de 8 horas (julio de 2024 a octubre de 2026); solo el modelo pequeño. El modelo base no se ejecutó.</td></tr>
+</tbody></table></div>
+<p><strong>Lectura.</strong> Cuatro hallazgos pasan a las reglas del curso. Uno: copiar a una wallet solo funciona con retraso cero, que un minorista no puede obtener; un solo slot de retraso convierte +23 SOL en −321 SOL. Dos: los rankings de beneficio pasado no predicen el resultado siguiente. Tres: los tokens graduados pierden entre el 11% y el 52% desde el minuto 0 hasta los 7 días, de modo que una estrategia solo de compra en ellos no tiene base. Cuatro: el carry de funding, que rendía por encima de la referencia en la serie larga, quedó en −0,2% a +3,2% en el último año, por debajo del 4% de la referencia sin riesgo de precio. Las limitaciones están en la tabla: son muestras de un solo proveedor de datos y un periodo corto, y la ausencia de resultado positivo no demuestra que no exista una ventaja con otros datos, otra latencia o otro capital. La consecuencia para el trader manual está en el módulo 11: la gestión de riesgo no crea ventaja.</p>
+
 <h3>Ranking por calidad de evidencia y adecuación</h3>
 <p>La posición combina la cantidad y fiabilidad de los datos de rentabilidad con el acceso, el capital, la habilidad necesaria y el riesgo de ruina. Es el criterio del informe de investigación, no un cálculo de rentabilidad.</p>
 <div class="tw"><table><thead><tr><th class="n">Posición</th><th>Vía</th><th>Calidad de la evidencia</th><th>Adecuación a un no profesional</th><th>Máximo documentado</th></tr></thead><tbody>
@@ -1818,6 +1842,7 @@ dfn.t:hover,dfn.t[data-open]{border-bottom-color:var(--ink);background:var(--acc
 <li><a href="https://www.theblock.co/post/379979/dogecoins-wall-street-glow-up-continues-with-launch-of-grayscale-dogecoin-etf">The Block, ETF de Dogecoin de Grayscale</a>; <a href="https://www.marketvector.com/indexes/digital-assets/marketvector-meme-coin">MarketVector, índice de memecoins</a></li>
 <li><a href="https://www.coindesk.com/tech/2026/02/18/zora-moves-onto-solana-with-attention-markets-for-trading-internet-trends">CoinDesk, Zora Attention Markets</a></li>
 <li>Entrevistas de YouTube citadas en el módulo 8 (reglas y filtros de Daumen, tamaño de Ethan y Cupsey, parada diaria de Deko, retiradas de Profits).</li>
+<li>Investigación propia, 2026: informes K1, V1, FM2, G1a, G1d, HL1, HL2, HL3, KR1 e «Edge real en trading cripto»; decisiones D-083 a D-091.</li>
 </ul></details>
 <div class="todo"><h3 id="m9t">Qué hacer con esto</h3>
 <ol>
@@ -1912,7 +1937,7 @@ dfn.t:hover,dfn.t[data-open]{border-bottom-color:var(--ink);background:var(--acc
 
 <section class="mod" id="m11" aria-labelledby="m11h">
 <header class="mh"><p class="meta">Módulo 11 · <span data-rt>1 min de lectura</span></p><h2 id="m11h">Gestión de riesgo y tamaño de posición</h2>
-<p class="lead">El tamaño de cada posición (cuánto dinero pones en un token) se calcula a partir de la pérdida máxima aceptada, no de la confianza en el token. Dos herramientas: una calculadora de tamaño y un simulador de expectativa (resultado medio por operación).</p></header>
+<p class="lead">El tamaño de cada posición (cuánto dinero pones en un token) se calcula a partir de la pérdida máxima aceptada, no de la confianza en el token. Dos herramientas: una calculadora de tamaño y un simulador de expectativa (resultado medio por operación). Antes de dimensionar nada, el módulo establece qué puede y qué no puede hacer la gestión de riesgo, con las mediciones propias del proyecto de investigación (investigación propia, 2026).</p></header>
 <div class="key" role="note" aria-labelledby="m11k"><h3 id="m11k">En 3 puntos</h3>
 <ol>
 <li>El tamaño de cada operación se calcula así: bankroll (capital destinado a operar) por el porcentaje de riesgo, dividido por la pérdida esperada si el token falla. La convención es arriesgar entre el 1% y el 2% del bankroll en cada operación. Si no hay una salida fiable, la pérdida esperada es el 100% de la posición. Las entrevistas con traders rentables (módulo 8) citan del 5% al 10% del bankroll por operación: es el tamaño de la posición, no el importe en riesgo (sección 2b).</li>
@@ -1921,7 +1946,9 @@ dfn.t:hover,dfn.t[data-open]{border-bottom-color:var(--ink);background:var(--acc
 </ol></div>
 
 
-<details class="callout note"><summary>Estatus de las reglas de este módulo</summary><p>Las fuentes de la primera investigación no contenían tamaños de posición, reglas de stop ni escaleras de take-profit más allá de "vender 50% al 2x y dejar el resto". Los módulos 8 y 9 añaden tamaños y reglas que declaran traders en entrevistas (sin verificar), que se comparan en la sección 2b. Los porcentajes de abajo son convenciones de gestión de riesgo del curso <span class="tag inf">Inferencia</span>, que debes ajustar a tu situación.</p></details>
+<div class="callout loss"><div class="ct">Mensaje central: la gestión de riesgo no crea ventaja</div><p>La gestión de riesgo no genera una ventaja estadística (en inglés, <em>edge</em>: expectativa positiva, es decir, un resultado medio por operación superior a cero después de costes). Hace dos cosas. Con expectativa positiva, elige el tamaño que maximiza el crecimiento del capital y evita la ruina (pérdida de una parte del capital tan grande que no permite continuar). Con expectativa negativa, solo reduce la velocidad a la que se pierde: ninguna regla de tamaño, stop o escalera de salida convierte una expectativa negativa en positiva.</p><p><span class="tag ok">Investigación propia, 2026</span> El proyecto probó 16 líneas de estrategia con reglas fijadas antes de ver los datos y validación fuera de muestra (una parte de los datos no usada para elegir la regla). Ninguna superó la referencia del 4% anual en USDC: todas perdieron o no la superaron (informe «Edge real en trading cripto»). Por eso el orden de este módulo es: primero medir si existe ventaja (secciones 6 y 7), después dimensionar (secciones 2, 8 y 9).</p></div>
+
+<details class="callout note"><summary>Estatus de las reglas de este módulo</summary><p>Las fuentes de la primera investigación no contenían tamaños de posición, reglas de stop ni escaleras de take-profit más allá de "vender 50% al 2x y dejar el resto". Los módulos 8 y 9 añaden tamaños y reglas que declaran traders en entrevistas (sin verificar), que se comparan en la sección 2b. Los porcentajes de abajo son convenciones de gestión de riesgo del curso <span class="tag inf">Inferencia</span>, que debes ajustar a tu situación. Las secciones 7 a 13 añaden mediciones del proyecto de investigación propio (2026), marcadas <span class="tag ok">Investigación propia</span>; la aritmética de tamaño, drawdown y criterio de Kelly es de uso general y se marca como tal.</p></details>
 
 <h3>1. Bankroll</h3>
 <p>El <strong>bankroll</strong> es el capital destinado a operar. Reglas:</p>
@@ -2051,6 +2078,82 @@ dfn.t:hover,dfn.t[data-open]{border-bottom-color:var(--ink);background:var(--acc
 <li>Con un tamaño alto, la mediana puede ser inferior a la media: unos pocos resultados extremos elevan el promedio. Observa la diferencia entre media y mediana.</li>
 </ul>
 
+<h3>7. Expectativa neta: la tasa de acierto sola no significa nada</h3>
+<p>La expectativa, expresada con las dos ramas de resultado, es:</p>
+<p class="mono">E = p(ganar) × ganancia media − p(perder) × pérdida media, todo neto de costes</p>
+<p>Una estrategia con una tasa de acierto alta puede tener expectativa nula o negativa, y una con tasa baja puede tenerla positiva. Lo que decide el signo es el producto de cada probabilidad por su magnitud media, no la frecuencia de aciertos.</p>
+<div class="callout info"><div class="ct">Caso medido: corto de 14 días en perpetuos de memecoins <span class="tag ok">Investigación propia</span></div><p>Vender en corto (apostar a que el precio baja) un perpetuo de memecoin de Hyperliquid y mantener 14 días gana el 61% de las veces. La mediana del resultado neto es +7,1%. Pero la media es solo +2,0%, con un intervalo de confianza al 95% de −4,2% a +7,9%: el intervalo incluye el cero, de modo que la media no se distingue de una expectativa nula. La causa es la cola derecha: en el periodo completo, 84 de 1.697 cortos (5%) perdieron más del 50% y más del 1% llegó al tope de −100%. Las pérdidas poco frecuentes pero grandes compensan las ganancias frecuentes y pequeñas (HL1; muestra de descubrimiento de 349 operaciones en 31 perpetuos; el 61% y la media corresponden a esa muestra, el 5% al periodo completo). De las 92 celdas de memecoins probadas, 36 tenían muestra suficiente (al menos 100 operaciones) y ninguna cumplió la regla de media neta positiva con límite inferior del intervalo por encima de cero.</p></div>
+<p>Un <strong>intervalo de confianza</strong> al 95% es el rango dentro del cual, con ese nivel de confianza estadística, se encuentra la media verdadera. Si contiene el cero, no hay evidencia de expectativa positiva. Con una tasa de acierto del 61% y una mediana positiva, un trader que no calcule la media creería tener una ventaja que no existe.</p>
+
+<h3>8. Pago asimétrico, stops y colas gruesas</h3>
+<p>La descripción habitual es "perder poco muchas veces y ganar mucho pocas veces". En términos técnicos, la pérdida media es pequeña, la ganancia media es grande y la tasa de acierto es baja. Esa estructura funciona solo si la expectativa neta es positiva. Con los parámetros del simulador (acierto 30%, múltiplo 2, pérdida 50%, coste 6%) la expectativa es −11% por operación: tener ganancias grandes y pocas no basta si no compensan las pérdidas y los costes.</p>
+<ul>
+<li><strong>Colocación del stop.</strong> El stop (orden de venta automática si el precio cae un porcentaje fijado) define la pérdida por operación y, con ella, el tamaño (sección 2). Un stop demasiado cercano se activa por la volatilidad normal y convierte posibles ganadoras en pérdidas pequeñas, que además pagan el coste completo de ida y vuelta. Un stop demasiado lejano exige una posición menor para el mismo riesgo. En memecoins el stop puede ejecutarse a un precio peor que el fijado, o no ejecutarse si desaparece la liquidez: por eso el curso mantiene 100% como pérdida por defecto hasta comprobar la salida.</li>
+<li><strong>Take-profit y ganadoras.</strong> Vender toda la posición en un objetivo fijo limita la ganancia media; no vender nunca expone a devolver lo ganado. La escalera de la sección 3 es un compromiso: asegura una parte y conserva exposición a la cola derecha. Su valor depende de que esa cola exista y de que el precio de entrada no la haya descontado.</li>
+<li><strong>Colas gruesas en ambos lados.</strong> Una distribución de <strong>cola gruesa</strong> asigna a los resultados extremos una probabilidad mucho mayor que la distribución normal. Los retornos de memecoins las tienen en las dos direcciones: ganancias de varios múltiplos y pérdidas totales. El caso de la sección 7 muestra que, incluso con cortos, la cola de pérdida puede anular una mediana favorable. Consecuencia práctica: la media de una muestra pequeña la dominan pocos casos; para estimar la expectativa hacen falta cientos de operaciones, no decenas.</li>
+</ul>
+
+<h3>9. Tamaño de la posición: fracción fija y criterio de Kelly</h3>
+<p><strong>Riesgo fraccional fijo.</strong> Es la regla de la sección 2: se arriesga un porcentaje constante del capital en cada operación (convención entre 0,5% y 2%), y el tamaño se obtiene dividiendo ese importe entre la distancia al stop. Con una pérdida máxima por operación del 1%, hacen falta 69 pérdidas consecutivas para reducir el capital a la mitad; con 2%, 35; con 10%, bastan 7 (0,9<sup>7</sup> = 0,478). Al ser un porcentaje del capital actual, el tamaño en moneda disminuye tras las pérdidas y aumenta tras las ganancias.</p>
+<p><strong>Criterio de Kelly.</strong> Es la fracción del capital que maximiza el crecimiento geométrico a largo plazo (el crecimiento compuesto, que es el que importa para el capital) cuando se conoce la ventaja. En una apuesta con pérdida total o ganancia de b veces lo arriesgado:</p>
+<p class="mono">f* = ventaja / cuota = (p × b − (1 − p)) / b = p − (1 − p) / b</p>
+<p>La ventaja es la expectativa por unidad arriesgada y la cuota es b. Ejemplo de uso general: p = 40% y b = 2 (se gana el doble de lo arriesgado). Ventaja = 0,4 × 2 − 0,6 = 0,2, y f* = 0,2 / 2 = 10% del capital por operación. Si la ventaja es cero o negativa, f* es cero o negativa: el criterio indica no operar.</p>
+<div class="tw"><table><caption>Crecimiento del capital por operación con p = 40% y b = 2 (f* = 10%). Cálculo de uso general: p × ln(1 + b·f) + (1 − p) × ln(1 − f)</caption><thead><tr><th>Fracción del capital arriesgada</th><th>Relación con Kelly</th><th class="n">Crecimiento por operación</th></tr></thead><tbody>
+<tr><td>2,5%</td><td>Un cuarto de Kelly</td><td class="n">+0,43%</td></tr>
+<tr><td>5%</td><td>Medio Kelly</td><td class="n">+0,74%</td></tr>
+<tr><td>10%</td><td>Kelly completo</td><td class="n">+0,97%</td></tr>
+<tr><td>20%</td><td>Doble de Kelly</td><td class="n">+0,07%</td></tr>
+<tr><td>25%</td><td>2,5 veces Kelly</td><td class="n">−1,04%</td></tr>
+<tr><td>30%</td><td>3 veces Kelly</td><td class="n">−2,60%</td></tr>
+</tbody></table></div>
+<p>Dos lecturas. Primera: con expectativa positiva, arriesgar demasiado la convierte en pérdida de capital. Con 2,5 veces Kelly, una estrategia cuya expectativa por operación es +20% de lo arriesgado reduce el capital en el largo plazo, porque la secuencia de pérdidas se compone. El preajuste "Tamaño excesivo (25%)" del simulador ilustra el mismo mecanismo. Segunda: un cuarto de Kelly conserva el 45% del crecimiento del Kelly completo (0,43% frente a 0,97%) con una fracción del riesgo de caída.</p>
+<p><strong>Usa una fracción de Kelly (un cuarto o la mitad), no el valor completo.</strong> La fórmula supone que p y b se conocen. En la práctica se estiman con una muestra finita y con error: la sección 7 muestra un intervalo de −4,2% a +7,9% para una media que en el cálculo puntual es positiva. Si la ventaja real es menor que la estimada, el Kelly calculado sobredimensiona la posición y puede situarla en la zona de crecimiento negativo. Como el curso no ha encontrado ninguna estrategia con ventaja demostrada, en la práctica la regla es el riesgo fijo del 0,5% al 2%, que queda por debajo de un cuarto de Kelly en cualquier escenario con ventaja plausible.</p>
+
+<h3>10. Drawdown, ruina y recuperación</h3>
+<p>El <strong>drawdown</strong> es la caída del capital desde su máximo anterior. Recuperar una pérdida exige una ganancia mayor que la pérdida, porque la base de cálculo es menor. La ganancia necesaria es pérdida / (1 − pérdida).</p>
+<div class="tw"><table><caption>Ganancia necesaria para recuperar un drawdown (aritmética)</caption><thead><tr><th class="n">Pérdida del capital</th><th class="n">Ganancia necesaria para recuperarla</th></tr></thead><tbody>
+<tr><td class="n">10%</td><td class="n">+11,1%</td></tr>
+<tr><td class="n">20%</td><td class="n">+25%</td></tr>
+<tr><td class="n">30%</td><td class="n">+42,9%</td></tr>
+<tr><td class="n">50%</td><td class="n">+100%</td></tr>
+<tr><td class="n">75%</td><td class="n">+300%</td></tr>
+<tr><td class="n">90%</td><td class="n">+900%</td></tr>
+</tbody></table></div>
+<p>El <strong>riesgo de ruina</strong> es la probabilidad de que el capital caiga por debajo del nivel que impide seguir operando. Aumenta con el tamaño de la posición, con la dispersión de resultados y con una expectativa baja o negativa. Un ejemplo de aritmética sencilla: con una probabilidad de pérdida del 60% en cada operación, una racha de 5 pérdidas seguidas ocurre con probabilidad del 7,8% (0,6<sup>5</sup>) en una secuencia dada y es habitual en una muestra larga. Con un riesgo del 10% por operación esa racha deja el capital en el 59%; con el 1%, en el 95%. Por eso el curso fija límites de drawdown (módulo 13: pausa al 20%, detención al 30%) y la calculadora de la sección 2 muestra cuántas pérdidas seguidas los alcanzan.</p>
+
+<h3>11. Correlación: varias posiciones pueden ser una sola apuesta</h3>
+<p>La <strong>correlación</strong> mide en qué medida dos activos se mueven en la misma dirección a la vez. Los memecoins de una misma cadena responden a los mismos factores: liquidez de SOL, apetito de riesgo y noticias del mercado. En una caída generalizada, diez posiciones del 2% se comportan como una posición del 20% y el límite de riesgo por operación deja de limitar la pérdida total. <span class="tag inf">Inferencia</span> Define un tope de exposición total (por ejemplo, el 10% del bankroll en riesgo sumando todas las posiciones abiertas) y trata las posiciones del mismo tema, de la misma plataforma de lanzamiento o abiertas en la misma hora como una sola a efectos del tope. El tope concreto es una convención del curso; no hay una medición propia de correlación entre posiciones.</p>
+
+<h3>12. Los costes son un riesgo y la rotación los multiplica</h3>
+<p>Cada operación completa paga el coste de ida y vuelta (módulo 4), que reduce la expectativa antes de cualquier estimación de ventaja. <span class="tag ok">Investigación propia</span> La comisión del pool de PumpSwap en el nivel más bajo de capitalización es de 1,25% por lado, es decir, 2,5% por ida y vuelta; en perpetuos de memecoins de Hyperliquid la comisión es de 0,09% y el deslizamiento medio de 0,44% por ida y vuelta (G1a, HL1). A esas cifras se suma un coste fijo de unos 0,006 SOL por ida y vuelta (G1a), que pesa más cuanto menor es la posición. El rango de comisión medido por ida y vuelta va de 0,1% a 2,5% según el mercado; con coste fijo e impacto en posiciones pequeñas, el total del módulo 4 es del 3% al 9% o más.</p>
+<p>Una rotación alta convierte un coste moderado por operación en una pérdida anual grande. <span class="tag ok">Investigación propia</span> En KR1, un modelo con una señal positiva pero muy pequeña (coeficiente de información por rangos de 0,0098, intervalo de 0,0013 a 0,0188) sobre perpetuos de Hyperliquid daba −9,8% anual en bruto y −166,5% anual neto: la rotación cada 8 horas costaba unos 155% anual. La señal era real y no bastaba para pagar el coste de operar con esa frecuencia. En el carry de funding (HL3), los costes consumieron aproximadamente la mitad del funding cobrado. Regla: antes de aumentar el número de operaciones, calcula el coste anual de la frecuencia prevista (coste de ida y vuelta × operaciones al año) y compáralo con la ventaja medida.</p>
+
+<h3>13. Qué dicen las mediciones propias sobre el valor de la gestión de riesgo</h3>
+<p>Las 16 líneas probadas (curva de pump.fun, tokens graduados, perpetuos de memecoins, corto tras el alta, carry de funding, señal de Kronos, copia de carteras y de traders de Fomo, entre otras) no dieron ninguna expectativa positiva y robusta fuera de muestra. Entre los resultados: señales de la curva de pump.fun entre −1% y −11% neto; mantener tokens graduados de 0 minutos a 7 días, entre −11% y −52%; el carry de funding, entre +5,1% y +8,9% en la serie histórica pero entre −0,2% y +3,2% en el último año, por debajo del 4% de referencia. <span class="tag ok">Investigación propia</span> Consecuencia para este módulo: en esas líneas, un tamaño pequeño, un stop o una escalera de salida habrían reducido la velocidad de pérdida y no la habrían invertido. La gestión de riesgo es condición necesaria para sobrevivir, no suficiente para ganar. Si tu diario (módulo 12) no muestra una expectativa neta positiva sobre un número suficiente de operaciones, el uso correcto de este módulo es mantener el tamaño mínimo o no operar.</p>
+<p><span class="tag nv">Limitaciones</span> Las mediciones son del periodo 2023 a octubre de 2026 según la línea, con muestras y coberturas distintas; no prueban que no exista ninguna ventaja, solo que no se encontró con esas reglas, esos datos y esos costes.</p>
+
+<h3>14. Ejemplo resuelto de tamaño de una operación</h3>
+<p>Datos (ilustrativos, no medidos): bankroll de 10 SOL, riesgo del 1% por operación (0,1 SOL), token con liquidez comprobada, stop en −25% desde la entrada y primer objetivo en +75%.</p>
+<ol>
+<li><strong>Tamaño:</strong> 0,1 SOL / 25% = 0,4 SOL, el 4% del bankroll. Sin salida fiable (riesgo de rug, la retirada de la liquidez por el creador), la pérdida es 100% y el tamaño es 0,1 SOL.</li>
+<li><strong>Coste:</strong> 2,5% proporcional por ida y vuelta (PumpSwap, nivel bajo) más 0,006 SOL fijos: 0,4 × 0,025 + 0,006 = 0,016 SOL, el 4% de la posición. La pérdida real al stop es 25% + 4% = 29% de la posición, unos 0,116 SOL, el 1,16% del bankroll.</li>
+<li><strong>Acierto mínimo:</strong> ganancia neta 75% − 4% = 71%; pérdida neta 29%. Equilibrio: p* = 29 / (71 + 29) = 29%. Sin costes sería 25%.</li>
+<li><strong>Expectativa si el acierto fuera 40%:</strong> 0,4 × 71% − 0,6 × 29% = +11% de la posición, es decir +0,044 SOL por operación. Esta expectativa positiva es una hipótesis del ejemplo: en el proyecto no se encontró ninguna regla de entrada con ese acierto. Con acierto del 29% el resultado es cero, y con el 20% es −12,6% de la posición.</li>
+<li><strong>Exposición total:</strong> con un tope del 10% del bankroll en riesgo, caben a la vez 8 posiciones de 0,1 SOL en riesgo (cada una 1%), siempre que no sean del mismo tema ni de la misma hora (sección 11).</li>
+</ol>
+
+<h3>15. Lista de comprobación antes de cada operación</h3>
+<ol>
+<li>La estrategia tiene expectativa neta positiva medida (con intervalo de confianza que no incluya cero) o estoy en práctica con tamaño mínimo.</li>
+<li>Riesgo de la operación entre el 0,5% y el 2% del bankroll, calculado con la pérdida al stop, no con la confianza.</li>
+<li>Stop, objetivos y invalidación escritos antes de comprar; comprobada la liquidez para salir. Si no hay salida fiable, pérdida esperada del 100%.</li>
+<li>Coste de ida y vuelta calculado (módulo 4) y menor que una fracción pequeña del objetivo; acierto mínimo calculado.</li>
+<li>Exposición total abierta dentro del tope y posiciones correlacionadas contadas como una.</li>
+<li>Drawdown actual por debajo de los límites del módulo 13 y pérdida diaria por debajo de 3 veces el riesgo por operación.</li>
+<li>Número de operaciones del día dentro del máximo fijado.</li>
+</ol>
+<div class="callout compact"><p><strong>Aviso.</strong> Material educativo. No es asesoramiento financiero. El criterio de Kelly, el riesgo fijo y los ejemplos numéricos son herramientas de cálculo, no recomendaciones de inversión, y no garantizan resultados.</p></div>
+
 <details class="src"><summary>Fuentes del módulo</summary><ul>
 <li><a href="https://theblackswans.substack.com/p/memecoin-season-is-back-how-to-trench">The Black Swans, moonbag al 2x y diario de operaciones</a></li>
 <li><a href="https://www.kucoin.com/news/flash/analysis-of-top-20-fomo-profit-leaders-reveals-key-investment-strategies">KuCoin Flash, 80% a 90% del beneficio en 1 a 3 posiciones</a></li>
@@ -2058,12 +2161,16 @@ dfn.t:hover,dfn.t[data-open]{border-bottom-color:var(--ink);background:var(--acc
 <li><a href="https://boxmining.com/axiom-memecoin-trading-guide/">boxmining, fijar tamaño y pérdida máxima antes de entrar</a></li>
 <li>Módulos 8 y 9: tamaños declarados por Ethan y Cupsey y parada diaria de Deko (entrevistas de YouTube, autodeclarado).</li>
 <li>Mecánica del tamaño por riesgo fijo y simulación: métodos generales de gestión de riesgo; parámetros del curso, no de la investigación.</li>
+<li>Investigación propia, 2026 (proyecto de investigación del autor del curso): HL1 (perpetuos de memecoins en Hyperliquid), KR1 (señal Kronos en perpetuos), HL3 (carry de funding), G1a y G1d (tokens graduados), K1 (copia con retraso), FM2 (traders de Fomo), decisiones D-083 a D-091 e informe «Edge real en trading cripto» (16 líneas de estrategia).</li>
+<li>Criterio de Kelly y aritmética de drawdown: fórmulas estándar de teoría de la información y de gestión de riesgo, calculadas aquí con los parámetros indicados.</li>
 </ul></details>
 <div class="todo"><h3 id="m11t">Qué hacer con esto</h3>
 <ol>
 <li>Calcula con la calculadora tu tamaño máximo según tu bankroll y tu riesgo por operación, y anótelo.</li>
 <li>Escribe la invalidación y la escalera de salida antes de cada compra.</li>
 <li>Usa el simulador para hallar el acierto mínimo con expectativa nula según tus costes.</li>
+<li>Calcula la expectativa neta de tus operaciones del diario (media, no mediana ni tasa de acierto) y su intervalo de confianza. Sin expectativa positiva, no aumentes el tamaño.</li>
+<li>Fija un tope de exposición total y revisa la lista de comprobación de la sección 15 antes de cada compra.</li>
 </ol></div>
 <div class="quiz" data-quiz="m11"></div>
 <nav class="pn" aria-label="Navegación entre módulos"><a class="prev" href="#m10" rel="prev"><span class="pl">Anterior</span><span class="pt">Qué enseñan las competiciones de 2026</span></a><a class="next" href="#m12" rel="next"><span class="pl">Siguiente</span><span class="pt">Psicología y diario</span></a></nav>
@@ -2345,6 +2452,7 @@ dfn.t:hover,dfn.t[data-open]{border-bottom-color:var(--ink);background:var(--acc
 <dt data-k="delta neutral">Delta neutral</dt><dd>Posición cuyo valor total no cambia con el precio del activo, por ejemplo comprar el activo y vender un perpetuo del mismo tamaño.</dd>
 <dt data-k="[Dd]esarrolladores?|dev">Desarrollador (dev)</dt><dd>Persona o grupo que crea un token y controla sus primeras wallets.</dd>
 <dt data-k="[Dd]eving">Deving</dt><dd>Crear tokens para vender la posición del creador y cobrar comisiones de creador.</dd>
+<dt data-k="[Dd]rawdowns?">Drawdown</dt><dd>Caída del capital desde su máximo anterior, en porcentaje. Recuperar una caída del 50% exige ganar un 100%.</dd>
 <dt data-k="DEX">DEX (exchange descentralizado)</dt><dd>Aplicación que intercambia tokens directamente desde tu wallet, mediante contratos en la blockchain y sin que una empresa custodie tu dinero.</dd>
 <dt data-k="[Dd]rainers?">Drainer</dt><dd>Contrato malicioso que vacía una wallet cuando el usuario firma una transacción engañosa.</dd>
 <dt data-k="[Dd]rawdown">Drawdown</dt><dd>Caída porcentual del capital desde su máximo hasta un mínimo posterior.</dd>
@@ -2372,6 +2480,7 @@ dfn.t:hover,dfn.t[data-open]{border-bottom-color:var(--ink);background:var(--acc
 <dt data-k="[Ii]nsiders?">Insider</dt><dd>Wallet con acceso previo al lanzamiento de un token o a información que aún no es pública.</dd>
 <dt data-k="[Ii]nvalidaci(?:ón|ones)">Invalidación</dt><dd>Condición definida antes de comprar que prueba que la tesis es errónea y obliga a salir.</dd>
 <dt data-k="Jito tips?">Jito tip</dt><dd>Propina a validadores de Solana que usan Jito para que un paquete de transacciones se incluya en el orden pedido.</dd>
+<dt data-k="[Cc]riterio de Kelly|Kelly">Kelly (criterio de)</dt><dd>Fracción del capital que maximiza el crecimiento compuesto cuando se conoce la ventaja: f* = ventaja / cuota. Como la ventaja se estima con error, se usa una fracción (un cuarto o la mitad).</dd>
 <dt data-k="KOL">KOL (key opinion leader)</dt><dd>Persona con audiencia que promociona tokens.</dd>
 <dt data-k="Kolscan">Kolscan</dt><dd>Web que clasifica wallets de Solana por beneficio realizado a 1, 7 y 30 días. Pump.fun la adquirió el 2025-07-10.</dd>
 <dt data-k="L2">L2</dt><dd>Blockchain construida sobre otra (aquí Ethereum) para hacer las operaciones más baratas y rápidas.</dd>
@@ -3036,7 +3145,11 @@ m11:[
  ["¿Por qué se usa 100% de pérdida esperada cuando no hay salida fiable?",["Por prudencia contable","Porque la liquidez puede desaparecer y el stop no garantiza el precio","Porque lo exige el terminal","Porque el riesgo siempre es 100%"],1,"En memecoins el precio puede saltar y no se puede asumir que el stop se ejecute al precio fijado."],
  ["Con acierto del 30%, múltiplo ganador 2, pérdida media del 50% y coste del 6%, ¿cuál es la expectativa por operación?",["+11%","0%","-11%","-50%"],2,"0,30 × 1 - 0,70 × 0,50 - 0,06 = -0,11."],
  ["¿Qué es un moonbag?",["Una comisión","La fracción que se conserva tras recuperar el capital inicial","Un tipo de wallet","Una orden límite"],1,"Tras vender el 50% al 2x, el resto se mantiene a la espera de una subida mayor."],
- ["Si la mediana del bankroll final es muy inferior a la media, ¿qué indica?",["Un error de cálculo","Que pocos resultados extremos elevan el promedio","Que no hay riesgo","Que el coste es cero"],1,"La distribución es asimétrica: la media la elevan unos pocos casos."]
+ ["Si la mediana del bankroll final es muy inferior a la media, ¿qué indica?",["Un error de cálculo","Que pocos resultados extremos elevan el promedio","Que no hay riesgo","Que el coste es cero"],1,"La distribución es asimétrica: la media la elevan unos pocos casos."],
+ ["Una estrategia gana el 61% de las veces con mediana de +7,1%, pero su media es +2,0% con intervalo de −4,2% a +7,9%. ¿Qué se concluye?",["Que tiene ventaja porque gana más de la mitad de las veces","Que la expectativa no se distingue de cero: las pocas pérdidas grandes anulan las ganancias frecuentes","Que el intervalo está mal calculado","Que basta con aumentar el tamaño"],1,"El intervalo incluye el cero. Un 5% de operaciones perdió más del 50%. Medida del corto a 14 días en perpetuos de memecoins (investigación propia, 2026)."],
+ ["¿Cuánto debe ganar un capital que ha caído un 50% para volver al nivel inicial?",["+50%","+75%","+100%","+150%"],2,"Ganancia necesaria = pérdida / (1 − pérdida) = 0,5 / 0,5 = 100%."],
+ ["¿Por qué se usa un cuarto o la mitad de Kelly en lugar del Kelly completo?",["Porque Kelly no funciona con expectativa positiva","Porque la ventaja se estima con error y sobredimensionar puede dar crecimiento negativo","Porque los terminales lo exigen","Porque reduce los costes a cero"],1,"Con 2,5 veces Kelly, incluso una estrategia con expectativa positiva reduce el capital a largo plazo."],
+ ["¿Qué efecto tiene la gestión de riesgo sobre una estrategia con expectativa negativa?",["La convierte en positiva","La mantiene igual","Reduce la velocidad de pérdida sin cambiar su signo","Elimina el coste de operar"],2,"La gestión de riesgo no crea ventaja: con expectativa negativa solo ralentiza la pérdida (16 líneas medidas, ninguna positiva)."]
 ],
 m12:[
  ["¿Qué es el revenge trading?",["Operar con una tesis larga","Operar para recuperar una pérdida reciente","Operar solo de noche","Copiar a un trader"],1,"Se detecta por una operación inmediata tras una pérdida, con más tamaño o sin invalidación."],
