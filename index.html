@@ -1227,6 +1227,17 @@ dfn.t:hover,dfn.t[data-open]{border-bottom-color:var(--ink);background:var(--acc
 <h4>Por qué falla en la mayoría</h4><p>Día 0: volumen mediano de 104.749 USD con 705 traders. Día 1: el 59,9% registra algún trade y el volumen mediano es de 0,10 USD. Día 3: 47,4% con mediana de 0 traders. Los tokens graduados con BOOST obtienen una ventana de compras programadas de duración fija y después pierden esa demanda.</p>
 <h4>Veredicto</h4><p>Los datos indican caída de demanda tras la ventana. Se estudia como observación (anotar precio a 5 minutos, 1 hora y 24 horas de una muestra de tokens), no como operación.</p></div></div></article>
 
+<h3>Por qué seguir canales de llamadas te convierte en liquidez de salida</h3>
+<p><span class="tag ok">Investigación propia, 2026</span> Un canal de llamadas es un canal público de Telegram donde se publica la dirección de un token para que sus seguidores lo compren. El proyecto midió qué habría ocurrido al comprar cada token un minuto después de su primera mención, con reglas fijadas antes de ver los resultados y costes incluidos (AT1; D-092).</p>
+<ul>
+<li><strong>Muestra.</strong> 40 canales públicos de llamadas de Solana, elegidos por el número de citas en un agregador, sin mirar precios. En 90 días: 4.721 menciones de 1.953 tokens.</li>
+<li><strong>Resultado de las reglas.</strong> Se probaron 30 variantes (primera mención y aceleración de menciones entre canales, con salidas de 1 hora a 72 horas, con y sin parada y objetivo). Ninguna tuvo media neta positiva. La mejor perdió un 12,0% de media (n = 178).</li>
+<li><strong>El precio ya había subido.</strong> En la hora anterior a la mención, la mediana fue de +20,6%. Después, la mediana fue de −19,5% a 1 hora y de −86% a 72 horas. El resultado fue peor que el de un token de referencia sin menciones, elegido al azar con una capitalización parecida y los mismos costes.</li>
+</ul>
+<p><strong>Mecanismo.</strong> El canal publica el token cuando ya ha subido. Quien lo compra al ver la llamada compra después de esa subida y, con frecuencia, a quienes entraron antes, que vendieron en parte a los compradores de la llamada. Si el seguidor compra tras la subida, su salida depende de que lleguen compradores nuevos, y ese flujo se agota. Por eso el seguidor actúa como liquidez de salida: es la contrapartida de quien vende con ganancia.</p>
+<p><strong>Lección práctica.</strong> Una llamada pública no es una ventaja de información, porque el precio ya la descuenta cuando llega. Si un canal es útil, lo es como fuente de candidatos para observar y anotar, no como señal de compra. Compra solo con una tesis propia escrita antes de ver el precio actual de la llamada, o no compres.</p>
+<p><strong>Limitaciones.</strong> La medición cubre solo canales públicos de Solana, 90 días de datos y velas de GeckoTerminal, con un coste de 0,1 SOL por operación. La referencia aleatoria depende del criterio de capitalización elegido, y ningún canal individual salvó el resultado (los pocos con media positiva tenían muy pocas señales). No se probó anticiparse a la mención con datos de la cadena, por ejemplo con las carteras que compran antes de que publique el canal. La ausencia de resultado positivo no demuestra que no pueda existir una ventaja con otros datos o con otra latencia.</p>
+
 <h3>Resumen comparativo</h3>
 <div class="tw"><table class="wide"><thead><tr><th>Arquetipo</th><th>Frecuencia</th><th>Ventaja necesaria</th><th>Riesgo principal</th><th>Principiante</th></tr></thead><tbody>
 <tr><td>1. Sniper micro cap</td><td>Alta</td><td>Velocidad, información o programas automáticos</td><td>Información privilegiada de otros</td><td>No</td></tr>
@@ -1253,6 +1264,7 @@ dfn.t:hover,dfn.t[data-open]{border-bottom-color:var(--ink);background:var(--acc
 <li><a href="https://www.theblock.co/news/defi/2026-09-27-onchain-analyst-links-18-4-million-in-robinhood-chain-memecoin-extractions-to-single-rug-pull-operation-416960">The Block, extracción en Robinhood Chain</a></li>
 <li><a href="https://www.bitrue.com/blog/which-meme-coin-narrative-will-dominate-2026">Bitrue, criterio de supervivencia de narrativas</a> (sin fecha verificable)</li>
 <li>Módulos 8 y 9 de este curso, con sus fuentes: Kolscan, GMGN, kolexplorer, entrevistas de YouTube y estudios académicos.</li>
+<li>Investigación propia, 2026 (proyecto de investigación del autor del curso): AT1 (atención temprana en canales públicos de Telegram) y decisión D-092.</li>
 </ul></details>
 <div class="todo"><h3 id="m6t">Qué hacer con esto</h3>
 <ol>
@@ -1829,21 +1841,21 @@ dfn.t:hover,dfn.t[data-open]{border-bottom-color:var(--ink);background:var(--acc
 <h4>Riesgos</h4><p>Manipulaciones de precio en perpetuos de memecoins que el vault absorbe, decisiones de los validadores, rendimiento decreciente y riesgo de plataforma. DefiLlama retiró sus datos de perpetuos de Aster por sospecha de wash trading: los datos de estas plataformas pueden no ser fiables.</p>
 <h4>Idoneidad</h4><p>Media. Es accesible, pero con un rendimiento que cayó y un riesgo de pérdidas poco frecuentes y grandes (incidentes de 1,5M a 13,5M $).</p></div></div></article>
 
-<article class="arch one"><div class="ah"><h3>4. Cortos sobre listados nuevos de perpetuos</h3><span class="verd no">No apta para principiante</span></div>
+<article class="arch one"><div class="ah"><h3>4. Cortos sobre listados nuevos de perpetuos</h3><span class="verd no">Sin ventaja medida</span></div>
 <div class="ab"><div>
-<h4>Mecanismo</h4><p>Un corto es una apuesta a que el precio baja: vendes un contrato que no tienes y lo recompras más barato. El mecanismo propuesto por el autor del único estudio cuantitativo: los inversores tempranos, que compraron con descuento, se cubren vendiendo perpetuos del token cuando se lista, lo que presiona el precio a la baja.</p>
-<h4>Cifras documentadas</h4><ul><li>Robot James (Substack, 2026-02-01): sobre 280 listados de perpetuos de Binance desde 2021, un corto de 1.000 $ por listado que cumple criterios no revelados habría ganado más de 40.000 $. Exposición media de unos 5.000 $ y caída sostenida durante unos 100 días tras el listado. Es el backtest de un único autor, sin tasa de acierto, caída máxima ni costes de préstamo publicados, con detalle de pago. El autor advierte de riesgo de ruina.</li><li>Corroboración parcial en spot, sin metodología y sin ser específica de memecoins: 87 proyectos listados en spot en Binance en 2025, el 89% con rentabilidad negativa y una caída media del 71% al 80% desde el máximo (cuenta de X); 3 de 27 listados de Binance en 2025 en positivo, con pérdida media del 44% (BeInCrypto, página no abierta).</li><li>Un operador concreto (0xa31, Lookonchain, 2025-11-26) ganó 6,23M $ al mes con cortos en 21 monedas, con pérdidas relevantes en alguna. Es un caso, no una tasa de éxito, y requiere capital grande.</li></ul></div>
+<h4>Mecanismo</h4><p>Un corto es una apuesta a que el precio baja: vendes un contrato que no tienes y lo recompras más barato. La hipótesis procede de un backtest de un único autor (Robot James, Substack, 2026-02-01, sobre 280 listados de perpetuos de Binance, con criterios no revelados): los inversores tempranos, que compraron con descuento, se cubren vendiendo perpetuos del token cuando se lista, lo que presionaría el precio a la baja.</p>
+<h4>Cifras documentadas</h4><ul><li><span class="tag ok">Investigación propia, 2026</span> Con reglas fijadas antes de ver los datos (HL2; D-088), sobre 701 altas de perpetuos de Binance desde 2023: corto 24 horas tras el alta con salida a 72 horas, +0,90% (intervalo de confianza del 97,5%: de −1,09% a +3,07%); corto a 7 días con salida a 14 días, +0,34% (de −4,01% a +4,91%). Ambos intervalos incluyen el cero: la ventaja no está confirmada. Cerca del 60% de las operaciones gana, pero las liquidaciones y el funding negativo anulan la media.</li><li>Limitaciones: solo Binance (la réplica en Bybit no se ejecutó) y un periodo desde 2023. La ausencia de resultado positivo no demuestra que no exista una ventaja con otros datos o con otro capital.</li><li>Un operador concreto (0xa31, Lookonchain, 2025-11-26) ganó 6,23M $ al mes con cortos en 21 monedas, con pérdidas relevantes en alguna. Es un caso, no una tasa de éxito, y requiere capital grande.</li></ul></div>
 <div>
-<h4>Riesgos</h4><p>Apalancamiento (operar con más dinero del depositado), squeezes (subidas forzadas que liquidan los cortos), riesgo de ruina y riesgo de plataforma.</p>
-<h4>Idoneidad</h4><p>Baja. La evidencia es un backtest de un autor y datos de caída en spot que no son específicos de memecoins.</p></div></div></article>
+<h4>Riesgos</h4><p>Apalancamiento (operar con más dinero del depositado), squeezes (subidas forzadas que liquidan los cortos), riesgo de ruina, funding negativo y riesgo de plataforma.</p>
+<h4>Idoneidad</h4><p>Baja. La medición propia no encontró una media significativamente positiva y el mecanismo propuesto no se confirmó.</p></div></div></article>
 
-<article class="arch one"><div class="ah"><h3>5. Captura de funding y operación delta neutral</h3><span class="verd no">Baja a media</span></div>
+<article class="arch one"><div class="ah"><h3>5. Captura de funding y operación delta neutral</h3><span class="verd no">Sin ventaja reciente</span></div>
 <div class="ab"><div>
-<h4>Mecanismo</h4><p>Se compra el activo en spot y se vende un perpetuo del mismo tamaño. Así la posición es delta neutral: su valor total no cambia con el precio. Se cobra el funding rate, el pago periódico entre largos y cortos de los perpetuos, cuando es positivo.</p>
-<h4>Cifras documentadas</h4><ul><li>Blogs, sin verificación: funding agregado de Bitcoin y Ethereum de aproximadamente 11% anualizado en 2024 y 5% en 2025. En monedas pequeñas, del 20% al 60% o más. Fondos profesionales: aproximadamente 19% anualizado en 2025.</li><li>Para memecoins no se encontraron datos auditados de funding capturado.</li></ul></div>
+<h4>Mecanismo</h4><p>Se compra el activo en spot y se vende un perpetuo del mismo tamaño. Así la posición es delta neutral: su valor total no cambia con el precio. Se cobra el funding rate, el pago periódico entre largos y cortos de los perpetuos, cuando es positivo. Esta estrategia se denomina carry de funding.</p>
+<h4>Cifras documentadas</h4><ul><li><span class="tag ok">Investigación propia, 2026</span> Con reglas fijadas antes de ver los datos (HL3; D-089), con contado de Binance para 95 de 119 perpetuos, de junio de 2023 a octubre de 2026. Posición permanente en BTC y ETH: +8,88% anual en la serie completa, pero +3,24% en el último año, por debajo de la referencia de 4% en USDC (que no implica riesgo de precio de un perpetuo). Rotación entre los cinco activos de mayor funding: +5,14% anual, con −1,15% en la segunda mitad y −0,19% en el último año; los costes consumen cerca de la mitad del funding cobrado.</li><li>Capacidad estimada de unos 115.000 USD para la variante de BTC y ETH, con un techo de unos 3.700 EUR al año.</li><li>Limitaciones: contado de un solo proveedor y un periodo corto. Para memecoins no se encontraron datos auditados de funding capturado. Las cifras de blogs sobre funding de monedas pequeñas (del 20% al 60% anual o más) no se verificaron y no se recogen aquí como evidencia.</li></ul></div>
 <div>
-<h4>Riesgos</h4><p>El spot de memecoins suele tener poca liquidez, y el tramo spot no siempre puede cubrirse en perpetuos. Riesgo de plataforma y de liquidación si el precio se mueve antes de reequilibrar.</p>
-<h4>Idoneidad</h4><p>Baja a media, limitada por la liquidez del spot.</p></div></div></article>
+<h4>Riesgos</h4><p>El spot de memecoins suele tener poca liquidez, y el tramo spot no siempre puede cubrirse en perpetuos. Riesgo de plataforma y de liquidación si el precio se mueve antes de reequilibrar. El funding cambia de signo y se comprime con el tiempo.</p>
+<h4>Idoneidad</h4><p>Baja. En el último año el rendimiento medido no supera la referencia sin riesgo de precio.</p></div></div></article>
 
 <h4>Las seis vías restantes</h4>
 <div class="tw"><table><thead><tr><th>Vía</th><th>Cifras documentadas</th><th>Idoneidad</th></tr></thead><tbody>
@@ -1865,8 +1877,9 @@ dfn.t:hover,dfn.t[data-open]{border-bottom-color:var(--ink);background:var(--acc
 <tr><td><strong>Corto tras el alta de un perpetuo</strong> (HL2; D-088)</td><td>En 701 altas de Binance desde 2023: corto 24 horas tras el alta con salida a 72 horas, +0,90% (intervalo de −1,09% a +3,07%); corto a 7 días con salida a 14 días, +0,34% (intervalo de −4,01% a +4,91%). No confirmado.</td><td>Solo Binance (la réplica en Bybit no se ejecutó). Las liquidaciones y el funding negativo anulan la media aunque cerca del 60% de las operaciones gana.</td></tr>
 <tr><td><strong>Carry de funding</strong> (HL3; D-089)</td><td>Dos variantes. Posición permanente en BTC y ETH: +8,88% anual en la serie completa, pero +3,24% en el último año, por debajo de la referencia de 4% en USDC. Rotación entre cinco activos de mayor funding: +5,14% anual, con −1,15% en la segunda mitad y −0,19% en el último año.</td><td>Contado de Binance para 95 de 119 perpetuos; capacidad estimada de unos 115.000 USD para la variante de BTC y ETH, con un techo de unos 3.700 EUR al año. Se declaró que una variante de reposición de margen se vio antes de fijar la principal.</td></tr>
 <tr><td><strong>Señal de aprendizaje automático (Kronos)</strong> (KR1; D-090)</td><td>Coeficiente de información por rangos de 0,0098: señal mínima y positiva. Resultado bruto −9,8% anual y neto −166,5% anual; la rotación cada 8 horas costó unos 155% anual.</td><td>2.475 velas de 8 horas (julio de 2024 a octubre de 2026); solo el modelo pequeño. El modelo base no se ejecutó.</td></tr>
+<tr><td><strong>Canales públicos de llamadas de Telegram</strong> (AT1; D-092)</td><td>4.721 menciones de 1.953 tokens en 90 días: ninguna de las 30 variantes de regla tuvo media neta positiva (la mejor, −12,0%, n = 178). El precio ya había subido una mediana de +20,6% en la hora previa a la mención y cae una mediana de −19,5% a 1 hora y −86% a 72 horas, peor que un token de referencia elegido al azar (módulo 6).</td><td>40 canales de Solana elegidos por citas en un agregador, sin mirar precios; velas de GeckoTerminal; 0,1 SOL por operación. No se probó anticiparse a la mención con datos de la cadena.</td></tr>
 </tbody></table></div>
-<p><strong>Lectura.</strong> Cuatro hallazgos pasan a las reglas del curso. Uno: copiar a una wallet solo funciona con retraso cero, que un minorista no puede obtener; un solo slot de retraso convierte +23 SOL en −321 SOL. Dos: los rankings de beneficio pasado no predicen el resultado siguiente. Tres: los tokens graduados pierden entre el 11% y el 52% desde el minuto 0 hasta los 7 días, de modo que una estrategia solo de compra en ellos no tiene base. Cuatro: el carry de funding, que rendía por encima de la referencia en la serie larga, quedó en −0,2% a +3,2% en el último año, por debajo del 4% de la referencia sin riesgo de precio. Las limitaciones están en la tabla: son muestras de un solo proveedor de datos y un periodo corto, y la ausencia de resultado positivo no demuestra que no exista una ventaja con otros datos, otra latencia o otro capital. La consecuencia para el trader manual está en el módulo 11: la gestión de riesgo no crea ventaja.</p>
+<p><strong>Lectura.</strong> Cinco hallazgos pasan a las reglas del curso. Uno: copiar a una wallet solo funciona con retraso cero, que un minorista no puede obtener; un solo slot de retraso convierte +23 SOL en −321 SOL. Dos: los rankings de beneficio pasado no predicen el resultado siguiente. Tres: los tokens graduados pierden entre el 11% y el 52% desde el minuto 0 hasta los 7 días, de modo que una estrategia solo de compra en ellos no tiene base. Cuatro: el carry de funding, que rendía por encima de la referencia en la serie larga, quedó en −0,2% a +3,2% en el último año, por debajo del 4% de la referencia sin riesgo de precio; el corto tras el alta de un perpetuo (+0,90% y +0,34%) no es distinguible de cero. Cinco: las llamadas de los canales públicos llegan después de la subida y quien las sigue compra a un precio ya elevado (módulo 6). Las limitaciones están en la tabla: son muestras de un solo proveedor de datos y un periodo corto, y la ausencia de resultado positivo no demuestra que no exista una ventaja con otros datos, otra latencia o otro capital. La consecuencia para el trader manual está en el módulo 11: la gestión de riesgo no crea ventaja.</p>
 
 <h3>Ranking por calidad de evidencia y adecuación</h3>
 <p>La posición combina la cantidad y fiabilidad de los datos de rentabilidad con el acceso, el capital, la habilidad necesaria y el riesgo de ruina. Es el criterio del informe de investigación, no un cálculo de rentabilidad.</p>
@@ -1874,8 +1887,8 @@ dfn.t:hover,dfn.t[data-open]{border-bottom-color:var(--ink);background:var(--acc
 <tr><td class="n">1</td><td>Airdrops y puntos en Binance Alpha</td><td>Media (cifras de la plataforma, amplias)</td><td>Media</td><td>De cientos de dólares al mes, a la baja <span class="tag nv">No verificado</span></td></tr>
 <tr><td class="n">2</td><td>Provisión de liquidez en pools de alto volumen</td><td>Ingresos agregados abundantes; rentabilidad por LP no documentada</td><td>Media a baja</td><td>13,5% trimestral antes de pérdida impermanente (cálculo del curso, agregado)</td></tr>
 <tr><td class="n">3</td><td>Vault HLP</td><td>Serie pública, cifras contradictorias</td><td>Media</td><td>3,6% a 30% anual según la fuente <span class="tag nv">No verificado</span>; incidentes de 1,5M a 13,5M $</td></tr>
-<tr><td class="n">4</td><td>Cortos de listados nuevos en perpetuos</td><td>Backtest de un autor; no específico de memecoins</td><td>Baja</td><td>Más de 40.000 $ en 280 listados (backtest)</td></tr>
-<tr><td class="n">5</td><td>Funding y delta neutral</td><td>Blogs, sin datos de memecoins</td><td>Baja a media</td><td>Aproximadamente 5% a 19% anual (blogs)</td></tr>
+<tr><td class="n">4</td><td>Cortos de listados nuevos en perpetuos</td><td>Medición propia sobre 701 altas: no significativa</td><td>Baja</td><td>+0,90% (intervalo de −1,09% a +3,07%), no confirmado</td></tr>
+<tr><td class="n">5</td><td>Funding y delta neutral</td><td>Medición propia: sin ventaja en el último año</td><td>Baja</td><td>+5,1% a +8,9% anual histórico; −0,2% a +3,2% en el último año</td></tr>
 <tr><td class="n">6</td><td>Swing y reversión en memecoins establecidas</td><td>Negativa tras costes</td><td>Baja</td><td>Sin ventaja neta</td></tr>
 <tr><td class="n">7</td><td>Jugadas de listados</td><td>Efecto debilitado, invertido o filtrado</td><td>Baja</td><td>Hasta 51,9% en Upbit en 2025, sin efecto duradero (resumen)</td></tr>
 <tr><td class="n">8</td><td>Recompensas a holders y reparto de comisiones</td><td>Sin retorno realizado documentado</td><td>Baja</td><td>PUMP, -75%</td></tr>
@@ -2452,73 +2465,60 @@ dfn.t:hover,dfn.t[data-open]{border-bottom-color:var(--ink);background:var(--acc
 <li>Programa las revisiones de los días 21 y 28 y la decisión escrita del día 30.</li>
 </ol></div>
 <div class="quiz" data-quiz="m13"></div>
-<nav class="pn" aria-label="Navegación entre módulos"><a class="prev" href="#m12" rel="prev"><span class="pl">Anterior</span><span class="pt">Psicología y diario</span></a><a class="next" href="#m14" rel="next"><span class="pl">Siguiente</span><span class="pt">Fiscalidad en España</span></a></nav>
+<nav class="pn" aria-label="Navegación entre módulos"><a class="prev" href="#m12" rel="prev"><span class="pl">Anterior</span><span class="pt">Psicología y diario</span></a><a class="next" href="#m14" rel="next"><span class="pl">Siguiente</span><span class="pt">Fiscalidad: principios generales</span></a></nav>
 </section>
 
 <section class="mod" id="m14" aria-labelledby="m14h">
-<header class="mh"><p class="meta">Módulo 14 · <span data-rt>1 min de lectura</span></p><h2 id="m14h">Fiscalidad en España</h2>
-<p class="lead">Resumen breve de cómo tributan las operaciones con memecoins para un residente fiscal en España.</p></header>
+<header class="mh"><p class="meta">Módulo 14 · <span data-rt>1 min de lectura</span></p><h2 id="m14h">Fiscalidad: principios generales</h2>
+<p class="lead">Principios comunes sobre el tratamiento fiscal de las operaciones con memecoins. Las reglas concretas dependen de la jurisdicción de cada persona, que debe consultarlas con un asesor fiscal local.</p></header>
 <div class="key" role="note" aria-labelledby="m14k"><h3 id="m14k">En 3 puntos</h3>
 <ol>
-<li>Cada intercambio de un memecoin por SOL, USDC u otra criptomoneda es una permuta que genera ganancia o pérdida patrimonial, aunque no se retire dinero a euros.</li>
-<li>Las ganancias se integran en la base del ahorro del IRPF (el impuesto sobre la renta de las personas físicas en España), con tipos del 19% al 30% según el tramo. Con 10.000 € de ganancia neta, la cuota estimada es 1.980 €.</li>
-<li>DAC8 (una directiva europea sobre criptoactivos) obliga a los proveedores a informar a la Hacienda desde 2026, pero la obligación de declarar es tuya aunque el proveedor no informe. Confirma cada punto con un asesor fiscal.</li>
+<li>En la mayoría de las jurisdicciones, las ganancias con criptomonedas tributan, y un intercambio entre tokens suele ser un hecho imponible aunque no se retire dinero a moneda de curso legal.</li>
+<li>Un registro completo de cada operación (fecha, token, cantidades, comisiones y wallet), llevado desde el primer día, es la condición para poder calcular y justificar el resultado. No se reconstruye bien a posteriori.</li>
+<li>El método de coste, la compensación de pérdidas, el tratamiento de ingresos como staking o funding y las obligaciones de información dependen de la normativa local. Confirma cada punto con un asesor fiscal.</li>
 </ol></div>
 
-<div class="callout warn"><div class="ct">Verificar con asesor fiscal</div><p>Este módulo es un resumen informativo y no sustituye el asesoramiento de un profesional. La normativa, los tramos y los criterios de la Administración cambian. Confirma cada punto con un asesor fiscal antes de presentar la declaración. Las fuentes de la investigación no cubren fiscalidad; el contenido procede del enunciado del curso y de mecánica general.</p></div>
+<div class="callout warn"><div class="ct">Verificar con asesor fiscal</div><p>Este módulo es un resumen informativo de principios generales y no sustituye el asesoramiento de un profesional. No asume ninguna jurisdicción concreta: la normativa, los tipos y los criterios de las administraciones cambian y difieren entre países. Las fuentes de la investigación no cubren fiscalidad.</p></div>
 
-<h3>Qué operaciones tributan</h3>
+<h3>Qué operaciones suelen tributar</h3>
 <ul>
-<li>Cada intercambio de un memecoin por SOL, USDC u otra criptomoneda es una <strong>permuta</strong>: una transmisión de un activo a cambio de otro. Cada permuta genera una <strong>ganancia o pérdida patrimonial</strong>, aunque no se retire dinero a euros.</li>
-<li>La ganancia o pérdida es la diferencia entre el valor de transmisión en euros en el momento del intercambio y el valor de adquisición en euros, con las comisiones asociadas que corresponda computar (verifica su tratamiento).</li>
-<li>Comprar un memecoin con SOL y luego venderlo por SOL genera dos hechos: la compra es una permuta de SOL por el token (se valora el SOL entregado) y la venta es otra permuta (se valora el token entregado). Registra la cotización en euros en cada fecha.</li>
-<li>Airdrops, recompensas de holders y comisiones de creador recibidas pueden tributar como rendimientos o ganancias según su naturaleza: consulta al asesor.</li>
+<li>Las ganancias obtenidas al vender criptomonedas por moneda de curso legal están sujetas a impuestos en la mayoría de las jurisdicciones.</li>
+<li>El intercambio de un token por otro (por ejemplo, un memecoin por SOL o USDC) suele considerarse una <strong>permuta</strong>: una transmisión de un activo a cambio de otro. En muchas jurisdicciones es un hecho imponible que genera ganancia o pérdida, aunque no se retire dinero.</li>
+<li>Comprar un memecoin con SOL y luego venderlo por SOL genera dos hechos: la compra es una permuta de SOL por el token y la venta es otra permuta. Cada una se valora, en general, al precio de mercado en la moneda de referencia local en su fecha.</li>
+<li>Los ingresos de tipo rendimiento, como staking, funding, recompensas de holders, airdrops o comisiones de creador, pueden tratarse de forma distinta de las ganancias de capital: por ejemplo, con otro tipo impositivo o con valoración en el momento de la recepción. Consulta cómo se tratan en tu jurisdicción.</li>
 </ul>
 
-<h3>Base del ahorro del IRPF</h3>
-<p>Las ganancias y pérdidas patrimoniales derivadas de la transmisión de criptomonedas se integran en la <strong>base del ahorro</strong> del IRPF. Tramos de la escala del ahorro (2025 en adelante, según el enunciado del curso):</p>
-<div class="tw"><table><thead><tr><th>Base del ahorro (euros)</th><th class="n">Tipo</th></tr></thead><tbody>
-<tr><td>Hasta 6.000</td><td class="n">19%</td></tr>
-<tr><td>De 6.000 a 50.000</td><td class="n">21%</td></tr>
-<tr><td>De 50.000 a 200.000</td><td class="n">23%</td></tr>
-<tr><td>De 200.000 a 300.000</td><td class="n">27%</td></tr>
-<tr><td>Más de 300.000</td><td class="n">30%</td></tr>
-</tbody></table></div>
-<div class="tool" id="tool-tax" role="group" aria-labelledby="tt-h"><div class="th"><span id="tt-h">Cuota estimada sobre una ganancia neta anual</span></div>
-<div class="tb two"><div class="fields"><div class="field"><label for="tx-gain">Ganancia patrimonial neta del año (euros)</label><input id="tx-gain" type="number" inputmode="decimal" step="any" min="0" value="10000"><small>Base del ahorro, sin otras rentas del ahorro</small></div></div>
-<div class="results" aria-live="polite"><div class="res"><div class="l">Cuota estimada (euros)</div><div class="v" id="tx-v1">-</div></div><div class="res"><div class="l">Tipo medio</div><div class="v" id="tx-v2">-</div></div><div class="res"><div class="l">Neto tras impuestos</div><div class="v" id="tx-v3">-</div></div></div></div>
-<div class="tb" style="padding-top:0"><p style="margin:0;font-size:14px">Cálculo aplicado solo a esta ganancia, sin otras rentas del ahorro (intereses, dividendos), sin mínimos ni deducciones. Estimación aritmética con los tramos anteriores; no es una liquidación.</p></div></div>
-<p>Ejemplo: con 10.000 € de ganancia neta, la cuota es 6.000 × 19% + 4.000 × 21% = 1.140 + 840 = 1.980 €.</p>
-
-<h3>Pérdidas</h3>
-<p>Las pérdidas patrimoniales por transmisión pueden compensar las ganancias patrimoniales de la base del ahorro según las reglas de compensación vigentes. Existen límites y plazos de compensación entre ejercicios y entre categorías de renta que debe confirmar el asesor. Las pérdidas de un memecoin que deja de cotizar sin haberse vendido tienen un tratamiento específico: pregunta cuándo y cómo pueden computarse.</p>
-
-<h3>Información a las autoridades: DAC8</h3>
-<p>DAC8 es la directiva europea de cooperación administrativa sobre criptoactivos. Según el enunciado del curso, sus obligaciones de reporte se aplican desde 2026 a los proveedores de servicios de criptoactivos (exchanges y custodios), que informan a la autoridad tributaria de las operaciones de sus clientes. Consecuencias prácticas:</p>
+<h3>Método de coste y pérdidas</h3>
 <ul>
-<li>La Administración podrá cruzar los datos de proveedores con tu declaración.</li>
-<li>La obligación de declarar es tuya aunque un proveedor no informe, por ejemplo en operaciones con wallets no custodiales y terminales descentralizados. Confirma con el asesor qué operaciones quedan fuera del reporte del proveedor y cómo se declaran.</li>
-<li>Pregunta también por obligaciones informativas sobre saldos de criptomonedas custodiadas en el extranjero.</li>
+<li>La ganancia o pérdida es, en general, la diferencia entre el valor de transmisión y el coste de adquisición, con las comisiones que la norma local permita computar.</li>
+<li>Cuando se compra el mismo activo en varias fechas, hace falta un criterio para decidir qué unidades se venden. El método FIFO (se venden primero las unidades compradas antes) es el más frecuente, pero existen otros, y cuáles se admiten depende de las reglas locales.</li>
+<li>Las pérdidas pueden compensar las ganancias según las reglas locales, con límites, plazos y categorías de renta que debe confirmar el asesor. Las pérdidas de un token que deja de cotizar sin haberse vendido pueden tener un tratamiento específico: pregunta cuándo y cómo pueden computarse.</li>
+</ul>
+
+<h3>Información a las autoridades</h3>
+<ul>
+<li>Cada vez más jurisdicciones obligan a exchanges y custodios a informar de las operaciones de sus clientes a la autoridad tributaria. La obligación de declarar es tuya aunque el proveedor no informe, por ejemplo en operaciones con wallets no custodiales y terminales descentralizados.</li>
+<li>Algunas jurisdicciones exigen además declarar los saldos mantenidos en plataformas extranjeras. Pregunta si te afecta.</li>
 </ul>
 
 <h3>Registro de operaciones</h3>
 <ol>
-<li>Exporta el historial del terminal (Axiom, Fomo, GMGN, Trojan u otro) cada mes. Si el terminal no permite exportar, copia las transacciones desde un explorador de bloques usando las direcciones de tus wallets.</li>
-<li>Guarda por cada operación: fecha y hora, activo entregado y recibido, cantidades, cotización en euros, comisiones, hash de la transacción (el código único que la identifica en la blockchain) y wallet.</li>
-<li>Conserva los registros varios años; el asesor te indicará el plazo.</li>
-<li>Una herramienta de contabilidad de criptomonedas puede agilizar el cálculo, pero la validación es tuya: miles de operaciones pequeñas generan errores de valoración.</li>
+<li>Registra desde el primer día, por cada operación: fecha y hora, token entregado y recibido, cantidades, precio en la moneda de referencia, comisiones, hash de la transacción (el código único que la identifica en la blockchain) y wallet.</li>
+<li>Exporta el historial de cada terminal (Axiom, Fomo, GMGN, Trojan u otro) y de cada wallet cada mes. Si el terminal no permite exportar, copia las transacciones desde un explorador de bloques usando las direcciones de tus wallets.</li>
+<li>Usa un programa de contabilidad fiscal de criptomonedas para calcular el resultado, pero la validación es tuya: miles de operaciones pequeñas generan errores de valoración y de clasificación.</li>
+<li>Conserva los registros durante el plazo que indique la normativa local.</li>
 <li>Los costes de ida y vuelta del módulo 4 reducen el beneficio contable; los registros deben reflejarlos.</li>
 </ol>
-<div class="callout info"><div class="ct">Aplicación al plan de 30 días</div><p>Con la práctica de 30 días (módulo 13) puede generar decenas de permutas. Exporta el historial el día 30 y el día 15 para comprobar que los datos son completos.</p></div>
+<div class="callout info"><div class="ct">Aplicación al plan de 30 días</div><p>Con la práctica de 30 días (módulo 13) puede generar decenas de permutas. Exporta el historial el día 15 y el día 30 para comprobar que los datos son completos.</p></div>
 <details class="src"><summary>Fuentes del módulo</summary><ul>
-<li>Enunciado del curso (tramos del ahorro 2025 en adelante, permuta, DAC8 desde 2026). No verificado en las fuentes de la investigación: <span class="tag nv">No verificado</span>. Consulta la Agencia Tributaria y a un asesor fiscal.</li>
-<li>Los datos de comisiones de los terminales (módulo 3) sirven para valorar los gastos deducibles pendientes de confirmación.</li>
+<li>Principios generales de contabilidad de operaciones con criptomonedas. No verificado en las fuentes de la investigación: <span class="tag nv">No verificado</span>. Consulta a un asesor fiscal de tu jurisdicción.</li>
+<li>Los datos de comisiones de los terminales (módulo 3) sirven para valorar los gastos que la norma local permita computar.</li>
 </ul></details>
 <div class="todo"><h3 id="m14t">Qué hacer con esto</h3>
 <ol>
-<li>Exporta el historial del terminal cada mes, o copia las transacciones desde un explorador de bloques.</li>
-<li>Guarda por operación fecha y hora, activos, cantidades, cotización en euros, comisiones, hash y wallet.</li>
-<li>Consulta al asesor fiscal el tratamiento de tokens que dejan de cotizar, airdrops y saldos custodiados en el extranjero.</li>
+<li>Registra cada operación desde el primer día y exporta el historial de terminales y wallets cada mes.</li>
+<li>Usa un programa de contabilidad fiscal de criptomonedas y revisa sus resultados.</li>
+<li>Consulta a un asesor fiscal local el método de coste, la compensación de pérdidas, el tratamiento de ingresos como staking o funding y las obligaciones de información.</li>
 </ol></div>
 <div class="quiz" data-quiz="m14"></div>
 <nav class="pn" aria-label="Navegación entre módulos"><a class="prev" href="#m13" rel="prev"><span class="pl">Anterior</span><span class="pt">Plan de práctica de 30 días</span></a><a class="next" href="#m15" rel="next"><span class="pl">Siguiente</span><span class="pt">Glosario y fuentes</span></a></nav>
@@ -2618,7 +2618,7 @@ dfn.t:hover,dfn.t[data-open]{border-bottom-color:var(--ink);background:var(--acc
 <dt data-k="[Pp]ayoff|ratio de pago">Payoff (ratio de pago)</dt><dd>Retorno típico de una operación ganadora dividido entre el valor absoluto del retorno típico de una perdedora. Un payoff de 2 significa que la ganancia típica duplica la pérdida típica.</dd>
 <dt data-k="[Pp]ercentil(?:es)?">Percentil</dt><dd>Valor por debajo del cual está un porcentaje dado de los datos. El percentil 25 deja por debajo al 25% y el percentil 90 al 90%.</dd>
 <dt data-k="[Pp]érdida impermanente">Pérdida impermanente</dt><dd>Diferencia negativa entre el valor de una posición de liquidez y el valor que habrían tenido los mismos dos activos mantenidos sin depositar, cuando el precio cambia.</dd>
-<dt data-k="[Pp]ermutas?">Permuta</dt><dd>Intercambio de un activo por otro; fiscalmente, una transmisión que genera ganancia o pérdida patrimonial.</dd>
+<dt data-k="[Pp]ermutas?">Permuta</dt><dd>Intercambio de un activo por otro; en muchas jurisdicciones, un hecho imponible que genera ganancia o pérdida.</dd>
 <dt data-k="[Pp]erpetuos|perps">Perpetuos (perps)</dt><dd>Contratos para apostar al precio de un activo con apalancamiento y sin fecha de vencimiento.</dd>
 <dt data-k="Photon">Photon</dt><dd>Terminal de trading para Solana. Tuvo la comisión realizada más alta de las medidas (1,06%).</dd>
 <dt data-k="PnL">PnL</dt><dd>Profit and loss: ganancia o pérdida en dinero de una operación o de una cuenta.</dd>
@@ -2814,7 +2814,7 @@ dfn.t:hover,dfn.t[data-open]{border-bottom-color:var(--ink);background:var(--acc
 <li>Repite la consulta de Dune por su identificador antes de citar una cifra.</li>
 </ol></div>
 <div class="quiz" data-quiz="m15"></div>
-<nav class="pn" aria-label="Navegación entre módulos"><a class="prev" href="#m14" rel="prev"><span class="pl">Anterior</span><span class="pt">Fiscalidad en España</span></a></nav>
+<nav class="pn" aria-label="Navegación entre módulos"><a class="prev" href="#m14" rel="prev"><span class="pl">Anterior</span><span class="pt">Fiscalidad: principios generales</span></a></nav>
 </section>
 <p class="footer">Datos con fecha de corte 2026-10-04, salvo el módulo 3, ampliado con datos del 2026-10-09. Material educativo, no asesoramiento financiero ni fiscal.</p>
 </main>
@@ -3161,16 +3161,6 @@ function initSim(){
   updateSim();
 }
 
-/* ---------- impuestos ---------- */
-function updateTax(){
-  var g=num("tx-gain",NaN);
-  if(!(g>=0)){set("tx-v1","-");set("tx-v2","-");set("tx-v3","-");return;}
-  var br=[[6000,0.19],[50000,0.21],[200000,0.23],[300000,0.27],[Infinity,0.30]];
-  var prev=0,tax=0;
-  for(var i=0;i<br.length;i++){var top=br[i][0];if(g>prev){tax+=(Math.min(g,top)-prev)*br[i][1];}prev=top;if(g<=top)break;}
-  set("tx-v1",fmt(tax,0)+" €");set("tx-v2",g>0?fmt(tax/g*100,1)+"%":"0%");set("tx-v3",fmt(g-tax,0)+" €");
-}
-
 /* ---------- casillas persistentes ---------- */
 function initPersist(){
   var st=sget("tm26_pl",{});
@@ -3249,7 +3239,7 @@ m9:[
  ["En MemeTrans, ¿qué resultado tuvo la selección de tokens guiada por un modelo frente a la selección al azar tras la migración?",["Ganancia del 27% frente a pérdida del 61%","Pérdida del 27% frente a pérdida del 61%","Pérdida del 61% frente a pérdida del 27%","Sin diferencia"],1,"El filtro reduce la pérdida pero no la elimina. Es una prueba con datos pasados de 3 meses y solo de pump.fun."],
  ["¿Qué porcentaje de los tokens con retorno superior al 100% mostró evidencia de crecimiento artificial en el estudio de Mongardini y Mei?",["Aproximadamente 8%","Aproximadamente 28%","82,8%","Ninguno"],2,"El 82,8% (wash trading e inflación del precio con compras pequeñas). Un retorno inicial alto es más indicio de manipulación que de demanda."],
  ["¿Qué concluye el estudio de Luo y colaboradores (WWW 2026) sobre copiar wallets por su beneficio histórico?",["Produce retorno positivo para quien copia","No produce retorno positivo tras el impacto de precio y las fricciones; con filtrado adicional estimó +3% por operación en backtest","Produce un 14% por operación","Solo funciona con programas automáticos"],1,"El 14% es el retorno medio de las wallets de dinero inteligente, no el de quien copia. El +3% es una prueba con datos pasados sin validación posterior."],
- ["¿Qué vía distinta del trenching ocupa el primer puesto del ranking por evidencia y adecuación?",["Cortos de listados, por un backtest de más de 40.000 $","Airdrops y puntos de Binance Alpha, por riesgo acotado al coste de volumen y cifras amplias, aunque a la baja","Provisión de liquidez, por un rendimiento de 134% anual","ETF de memecoins, por replicar con ventaja"],1,"Es la mejor evidencia numérica de la lista, con sesgo de fuente (cifras de la propia plataforma, no independientes) y beneficio decreciente por usuario."],
+ ["¿Qué vía distinta del trenching ocupa el primer puesto del ranking por evidencia y adecuación?",["Cortos de listados, por una ganancia histórica elevada","Airdrops y puntos de Binance Alpha, por riesgo acotado al coste de volumen y cifras amplias, aunque a la baja","Provisión de liquidez, por un rendimiento de 134% anual","ETF de memecoins, por replicar con ventaja"],1,"Es la mejor evidencia numérica de la lista, con sesgo de fuente (cifras de la propia plataforma, no independientes) y beneficio decreciente por usuario."],
  ["Con 10 SOL de bankroll, un riesgo del 1% por operación y una pérdida esperada del 20% si falla, ¿qué tamaño de posición corresponde?",["0,1 SOL","0,5 SOL","2 SOL","5 SOL"],1,"10 × 1% / 20% = 0,5 SOL, el 5% del bankroll: coincide con el 5% a 10% de las entrevistas. Con una pérdida esperada del 100%, el mismo riesgo da 0,1 SOL."]
 ],
 m10:[
@@ -3285,11 +3275,11 @@ m13:[
  ["¿Qué resultado esperado tiene el plan?",["Beneficio asegurado","Información sobre costes, ejecución y conducta","Rentabilidad del 100%","Ninguno"],1,"Un resultado neto pequeño y negativo con cumplimiento alto es válido."]
 ],
 m14:[
- ["¿Cómo se trata fiscalmente el intercambio de un memecoin por SOL o USDC?",["No tributa","Como permuta que genera ganancia o pérdida patrimonial","Como un regalo","Como un salario"],1,"Cada intercambio es una transmisión, aunque no se retire dinero a euros. Verifica con un asesor fiscal."],
- ["¿Qué tipo se aplica a los primeros 6.000 € de la base del ahorro?",["15%","19%","21%","23%"],1,"19% hasta 6.000 €; 21% entre 6.000 y 50.000 €; 23% hasta 200.000 €; 27% hasta 300.000 €; 30% por encima."],
- ["¿Qué cuota resulta de 10.000 € de ganancia neta, sin otras rentas del ahorro?",["1.000 €","1.980 €","2.500 €","3.000 €"],1,"6.000 × 19% + 4.000 × 21% = 1.140 + 840 = 1.980 €."],
- ["¿A quién se aplica el reporte de DAC8 desde 2026, según el enunciado del curso?",["A los usuarios","A los proveedores de servicios de criptoactivos","A los launchpads únicamente","A nadie"],1,"La obligación de declarar es del contribuyente aunque un proveedor no informe."],
- ["¿Qué debes conservar de cada operación?",["Solo el saldo final","Fecha, activos, cantidades, cotización en euros, comisiones y hash","Solo capturas de pantalla","Nada"],1,"Exporta el historial del terminal con regularidad."]
+ ["En términos generales, ¿cómo se suele tratar el intercambio de un memecoin por SOL o USDC?",["No tributa nunca","Como una transmisión que puede generar ganancia o pérdida, aunque no se retire dinero","Como un regalo","Como un salario"],1,"En muchas jurisdicciones cada intercambio entre tokens es un hecho imponible. Verifica la regla local con un asesor fiscal."],
+ ["¿Qué debes conservar de cada operación, desde el primer día?",["Solo el saldo final","Fecha, token, cantidades, comisiones, hash y wallet","Solo capturas de pantalla","Nada"],1,"Sin registro completo no se puede calcular ni justificar el resultado. Exporta el historial del terminal con regularidad."],
+ ["¿De qué depende el método para decidir qué unidades se consideran vendidas (FIFO u otros)?",["Es igual en todos los países","De las reglas locales","Del terminal usado","Del tamaño de la posición"],1,"FIFO es frecuente, pero los métodos admitidos varían según la jurisdicción."],
+ ["Los ingresos como staking, funding o recompensas, ¿se tratan siempre igual que una ganancia de capital?",["Sí, siempre","No: pueden tener otro tratamiento según la normativa local","No tributan nunca","Solo tributan si se retiran"],1,"Pueden valorarse al recibirse o gravarse con otro tipo. Consulta al asesor."],
+ ["Si un exchange o terminal no informa a la autoridad tributaria, ¿qué ocurre con tu obligación de declarar?",["Desaparece","Sigue siendo tuya","Pasa al exchange","Solo existe en operaciones grandes"],1,"La obligación es de la persona contribuyente; algunas jurisdicciones exigen además declarar saldos en plataformas extranjeras."]
 ],
 m15:[
  ["¿Qué es un sandwich?",["Un tipo de comisión","Un ataque que compra antes y vende después de la orden de otro","Un token con quema","Un tipo de launchpad"],1,"El atacante se queda con la diferencia de precio que provoca la orden de la víctima."],
@@ -3514,7 +3504,6 @@ initCost();
 initCheck();
 initSize();
 initSim();
-$("tx-gain").addEventListener("input",updateTax);updateTax();
 initPersist();
 initDefs();
 initNav();
